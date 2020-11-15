@@ -1,0 +1,308 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.27)  15 NOV 2020 13:22
+entering extended mode
+**./Intro_to_Attitude.tex
+(Intro_to_Attitude.tex
+LaTeX2e <2020-10-01> patch level 1
+L3 programming layer <2020-10-05> xparse <2020-03-03>
+(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/extsizes\extreport.cls
+Document Class: extreport 1996/10/08 v1.0 Non Standard LaTeX document class
+(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/extsizes\size14.clo
+File: size14.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
+)
+(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/base\exscale.sty
+Package: exscale 2018/09/24 v2.1i Standard LaTeX package exscale
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+\big@size=\dimen138
+)
+\c@part=\count175
+\c@chapter=\count176
+\c@section=\count177
+\c@subsection=\count178
+\c@subsubsection=\count179
+\c@paragraph=\count180
+\c@subparagraph=\count181
+\c@figure=\count182
+\c@table=\count183
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen139
+)
+(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen140
+\Gin@req@width=\dimen141
+) (C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip49
+For additional information on amsmath, use the `?' option.
+(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen142
+))
+(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen143
+)
+(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count184
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count185
+\leftroot@=\count186
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count187
+\DOTSCASE@=\count188
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen144
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count189
+\c@MaxMatrixCols=\count190
+\dotsspace@=\muskip16
+\c@parentequation=\count191
+\dspbrk@lvl=\count192
+\tag@help=\toks17
+\row@=\count193
+\column@=\count194
+\maxfields@=\count195
+\andhelp@=\toks18
+\eqnshift@=\dimen145
+\alignsep@=\dimen146
+\tagshift@=\dimen147
+\tagwidth@=\dimen148
+\totwidth@=\dimen149
+\lineht@=\dimen150
+\@envbody=\toks19
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/tools\bm.sty
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup4
+\symboldletters=\mathgroup5
+\symboldsymbols=\mathgroup6
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 209.
+)
+(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count196
+\l__pdf_internal_box=\box49
+) (Intro_to_Attitude.aux)
+\openout1 = `Intro_to_Attitude.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+
+(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count197
+\scratchdimen=\dimen151
+\scratchbox=\box50
+\nofMPsegments=\count198
+\nofMParguments=\count199
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count266
+\MPscratchDim=\dimen152
+\MPnumerator=\count267
+\makeMPintoPDFobject=\count268
+\everyMPtoPDFconversion=\toks22
+)
+(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+) [1
+
+{C:/Users/brian/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+(Intro_to_Attitude.toc)
+\tf@toc=\write3
+\openout3 = `Intro_to_Attitude.toc'.
+
+ [1
+
+]
+Chapter 1.
+[2
+
+] [3]
+Chapter 2.
+[4
+
+]
+<./images//shuttle_body_frame.jpg, id=22, 197.73875pt x 256.96pt>
+File: ./images//shuttle_body_frame.jpg Graphic file (type jpg)
+<use ./images//shuttle_body_frame.jpg>
+Package pdftex.def Info: ./images//shuttle_body_frame.jpg  used on input line 5
+8.
+(pdftex.def)             Requested size: 113.81102pt x 147.89592pt.
+<./images//ecef.png, id=23, 502.87875pt x 502.87875pt>
+File: ./images//ecef.png Graphic file (type png)
+<use ./images//ecef.png>
+Package pdftex.def Info: ./images//ecef.png  used on input line 58.
+(pdftex.def)             Requested size: 147.94893pt x 147.95424pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
+
+ []
+
+[5 <./images//shuttle_body_frame.jpg> <./images//ecef.png>]
+Overfull \hbox (2.33075pt too wide) in paragraph at lines 78--79
+[]\OT1/cmr/bx/n/14.4 At/near the sin-gu-lar-i-ties, the kine-matic dif-fer-en-t
+ial equa-
+ []
+
+[6]
+Chapter 3.
+[7
+
+]
+<./images//dcmalpha.jpg, id=35, 942.4008pt x 895.4253pt>
+File: ./images//dcmalpha.jpg Graphic file (type jpg)
+<use ./images//dcmalpha.jpg>
+Package pdftex.def Info: ./images//dcmalpha.jpg  used on input line 109.
+(pdftex.def)             Requested size: 199.16928pt x 189.23355pt.
+ [8 <./images//dcmalpha.jpg>]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
+43.
+
+(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 143.
+
+[9] [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 204--230
+
+ []
+
+[12] [13]
+Chapter 4.
+<./images//euler_proper.jpg, id=59, 620.3175pt x 231.86626pt>
+File: ./images//euler_proper.jpg Graphic file (type jpg)
+<use ./images//euler_proper.jpg>
+Package pdftex.def Info: ./images//euler_proper.jpg  used on input line 243.
+(pdftex.def)             Requested size: 455.24408pt x 170.16313pt.
+
+Overfull \hbox (25.24408pt too wide) in paragraph at lines 243--244
+ [] 
+ []
+
+[14
+
+ <./images//euler_proper.jpg>] [15]
+Chapter 5.
+[16
+
+]
+Chapter 6.
+[17
+
+]
+Chapter 7.
+[18
+
+]
+Chapter 8.
+[19
+
+]
+Chapter 9.
+[20
+
+]
+Chapter 10.
+[21
+
+]
+Chapter 11.
+[22
+
+]
+Chapter 12.
+[23
+
+] (Intro_to_Attitude.aux) ) 
+Here is how much of TeX's memory you used:
+ 2003 strings out of 480236
+ 30702 string characters out of 2880557
+ 303412 words of memory out of 3000000
+ 18563 multiletter control sequences out of 15000+200000
+ 545792 words of font info for 65 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 60i,9n,66p,586b,192s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/brian/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/brian/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/brian/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/brian/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/brian/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Us
+ers/brian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pf
+b><C:/Users/brian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmr12.pfb><C:/Users/brian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmr17.pfb><C:/Users/brian/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb><C:/Users/brian/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Intro_to_Attitude.pdf (24 pages, 825466 bytes).
+PDF statistics:
+ 123 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+
