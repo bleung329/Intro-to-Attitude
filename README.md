@@ -1,4 +1,3 @@
 # Intro-to-Attitude
-Introduction to Attitude Determination Text
 
-A WIP informal introduction to the the field of attitude determination.
+An informal introduction to the the field of attitude determination. Access the Intro_to_Attitude.pdf for the current iteration.
