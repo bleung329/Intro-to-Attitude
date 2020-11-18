@@ -33,8 +33,11 @@
 \contentsline {subsection}{\numberline {6.0.1}Well, what is a quaternion?}{21}{}%
 \contentsline {chapter}{\numberline {7}Attitude Determination?}{22}{}%
 \contentsline {chapter}{\numberline {8}TRIAD Method}{23}{}%
-\contentsline {chapter}{\numberline {9}Wahba's Problem}{24}{}%
-\contentsline {chapter}{\numberline {10}Davenport's Q}{25}{}%
-\contentsline {chapter}{\numberline {11}QUEST}{26}{}%
-\contentsline {chapter}{\numberline {12}Answer Key}{27}{}%
-\contentsline {section}{\numberline {12.1}Chapter 1 DCM}{27}{}%
+\contentsline {chapter}{\numberline {9}What is Wahba's Problem?}{24}{}%
+\contentsline {section}{\numberline {9.1}Definitions and Things}{24}{}%
+\contentsline {subsection}{\numberline {9.1.1}Defining Wahba's Problem}{24}{}%
+\contentsline {subsection}{\numberline {9.1.2}Well, How Do We Solve It?}{25}{}%
+\contentsline {chapter}{\numberline {10}Davenport's Q}{26}{}%
+\contentsline {chapter}{\numberline {11}QUEST}{27}{}%
+\contentsline {chapter}{\numberline {12}Answer Key}{28}{}%
+\contentsline {section}{\numberline {12.1}Chapter 1 DCM}{28}{}%

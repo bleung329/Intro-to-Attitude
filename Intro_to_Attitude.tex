@@ -32,12 +32,9 @@ At the time of writing this, I am not a seasoned spacecraft engineer nor a cutti
 I owe much thanks to CU Boulder's ``Spacecraft Dynamics and Control Specialization" on Coursera, and Professor Hanspeter Schaub, the professor of the course. Seriously, it's great. If you've got the time and access, I highly recommend you look through it.
 
 \section{What This Text Offers}
-I really want to emphasize that this text is \underline{not} a university textbook level reference, bursting at the seams with advanced terminology and derivations. This will not delve into dynamic attitude determination or control theory either. 
+I want to emphasize that this text is \underline{not} a university textbook level reference, bursting at the seams with advanced terminology and derivations. This will not delve into dynamic attitude determination or control theory either. 
 
-This text is essentially CU Boulder's Specialization, Part 1, distilled down to the key takeaways. This will give you a quick and dirty intro to the fundamentals of spacecraft attitude description and determination, avoiding lengthy proofs and derivation. It offers conceptual questions along the way to test your knowledge. It can act as a springboard into more advanced topics for the aspiring spacecraft engineer.
-\begin{center}
-(TLDR: attitude determination speedrun any \% glhf)
-\end{center}
+This text is essentially CU Boulder's Specialization, Part 1, distilled down to the key takeaways. This gives a quick and dirty intro to the fundamentals of spacecraft attitude description and determination, avoiding lengthy proofs and derivation. \footnote{TLDR: attitude determination speedrun any \% glhf} It offers conceptual questions along the way to test your knowledge. It can act as a springboard into more advanced topics or depth for the aspiring spacecraft engineer.
 
 \chapter{What is Attitude Anyways?}
 
@@ -261,7 +258,7 @@ Here's a visual example if it ain't too clear:
 This is what's described as a 3-1-3 Euler Angle, since the rotations operate on the Z, X, and Z body axes. The rotation sequence does the following:
 \begin{enumerate}
 \item Rotate the frame around the Z-axis by angle $\phi$. This forms a new frame with $X'$ and $Y'$ axes.
-\item Rotate the frame around the X' axes by angle $\theta$. This forms a frame with the $Z'$ and $Y''$ axes.
+\item Rotate the frame around the X'-axis by angle $\theta$. This forms a frame with the $Z'$ and $Y''$ axes.
 \item Finally, rotate the frame around the Z' axis by angle $\psi$. This forms a frame with the $X''$ and $Y'''$ axes, and the rotation is finished.
 \end{enumerate}
 
@@ -310,7 +307,7 @@ To get the full DCM of a $\alpha\beta\gamma$ Euler set:
 \end{center}
 (Depending who you work with, $\theta_1,\theta_2,\theta_3$ is the same as $\phi,\theta,\psi$, respectively. It'll vary with who you ask, just make sure you clarify.)
 \section{DCMs to Euler Angles}
-Converting from DCMs to Euler Angles is a little more complex. 
+Converting from DCMs to Euler Angles is a more involved process, due to the large variety of sets.
 \section{Singularities}
 
 \section{Test Your Knowledge}
@@ -320,7 +317,7 @@ Converting from DCMs to Euler Angles is a little more complex.
 
 Euler Angles are great, but you \emph{really} don't wanna use them for spacecraft and other body frames that can tumble head over heels. Moving away from the world of Euler angles, let's try something new. 
 
-First, a theorem for us to internalize. Known as \emph{Euler's Principal Rotation Theorem}, it states that:
+First, let's internalize \emph{Euler's Principal Rotation Theorem}. it states:
 
 \begin{center}
 \textbf{THEOREM: A rigid body can be brought from a start to an end orientation by a single rigid rotation ($\phi$ rad/deg) around some principal axis ($\hat{e}$). This principal axis is fixed in both the start and end orientation.}
@@ -332,7 +329,7 @@ First, a theorem for us to internalize. Known as \emph{Euler's Principal Rotatio
 (I know it says $\theta$, just pretend it's $\phi$)
 \end{center}
 
-We can take advantage of this theorem and extract the \textbf{Principal Rotation Vector} parameterization, also known as \emph{PRVs} for short.\\
+We can take advantage of this theorem and derive the \textbf{Principal Rotation Vector} attitude parameterization, also known as \emph{PRVs} for short.\\
 
 PRVs consist of 2 parts:
 \begin{enumerate}
@@ -350,7 +347,7 @@ This section isn't too complex, the formula is just thick.
 \[[BN] = \begin{bmatrix}
 			e_1^2\Sigma+c_\phi&e_1 e_2 \Sigma + e_3 s_\phi&e_1 e_3 \Sigma - e_2 s_\phi\\
 			e_2 e_1 \Sigma - e_3 s_\phi&e_2^2 \Sigma + c_\phi&e_2 e_3 \Sigma + e_1 s_\phi\\
-			e_3 e_1 \Sigma + e_2 s_\phi&e_3 e_2 \Sigma - e_1 s_\phi&e_3^3 \Sigma + c_\phi
+			e_3 e_1 \Sigma + e_2 s_\phi&e_3 e_2 \Sigma - e_1 s_\phi&e_3^2 \Sigma + c_\phi
 	\end{bmatrix}\]	
 \[
 \Sigma = 1-c_\phi
@@ -395,12 +392,46 @@ Now that you got a good chunk of the preliminaries out of the way, let's get int
 
 \chapter{TRIAD Method}
 Published in 1964, TRIAD is one of the oldest algorithms out there. Despite its age, it is still a viable method for simpler satellites.
-\chapter{Wahba's Problem}
+\chapter{What is Wahba's Problem?}
+\section{Definitions and Things}
 TRIAD is great and all, but what if we want to make use of all the sensors we have on our satellite? After all, your sponsor would probably be pissed if they paid for a GPS receiver and 4 star trackers but you're only using 1 star tracker and a sun sensor.
+
+\emph{Wahba's problem} was a question posed by the venerable Grace Wahba back in 1965. It goes a little like this:
+\subsection{Defining Wahba's Problem}
+Assume that we have $N>1$ measurement vectors in body frame ($\hat{v}_k^B$) and their corresponding measurement vectors in inertial frame($\hat{v}_k^N$). Attitude determination is basically a problem of finding a $[BN]$ that converts the inertial measurements to the body measurements like so:
+\begin{center}
+\[
+\hat{v}_k^B = [\tilde{B}N]\hat{v}_k^N 
+\]
+for k = 1,2, ... N
+\end{center}
+Nothing we don't know. However, the real world is mathematically cruel. You will never find a $[\tilde{B}N]$ matrix that perfectly maps from inertial to body. This is usually due to imperfect sensors making imperfect measurement vectors. 
+
+Well, what do we do now? If we can't acquire a perfect [BN] , then we should at least try finding [BN] a that maps our inertial measurements as closely as possible to our body measurements. 
+
+So Grace Wahba said ``Hey, why don't we try to minimize this loss function to get the best possible [BN] matrix?"\footnote{I'm pretty sure she didn't actually say this, just roll with it.}:
+
+\[
+\mathbf{
+J([\tilde{B}N]) = \dfrac{1}{2} \sum^N_{k=1} w_k |\hat{v}_k^B - [\tilde{B}N]\hat{v}_k^N|^2}
+\]
+
+Let's break this down.
+\begin{itemize}
+\item{$J([\tilde{B}N])$: This describes the overall error of the [BN] matrix we're looking at. Smaller J = Better [BN].}
+\item{$w_k$: This is a \emph{weighting value} assigned to that kth measurement vector. You typically assign this yourself. Higher weights are assigned to more reliable sensors. For example, you would assign a higher weight to a sun sensor or star tracker vs a magnetometer. Note that only relative sizes of the weight values matter, the values themselves don't really matter.
+}
+\item{$\hat{v}_k^B - [\tilde{B}N]\hat{v}_k^N$: This describes the error between the kth body measurement and the corresponding kth mapped inertial measurement.}
+\end{itemize}
+
+When you boil it down, it's basically a fancier least squares fit. Finding a solution involves minimizing the J as much as possible.
+
+\subsection{Well, How Do We Solve It?}
+Actually, there's no one definitive way to solve this. In addition, clever mathematicians and engineers are still coming up with solutions.
 \chapter{Davenport's Q}
 
 \chapter{QUEST}
-Davenport's Q is lovely, but computationally, solving that eigenvector problem is pretty expensive.
+Davenport's Q is lovely, but computationally, solving that eigenvector problem is pretty expensive. How about we bypass that eigenvector problem completely?
 \chapter{Answer Key}
 \section{Chapter 1 DCM}
 \begin{enumerate}

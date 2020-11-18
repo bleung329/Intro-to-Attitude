@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.27)  15 NOV 2020 18:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.27)  17 NOV 2020 22:03
 entering extended mode
 **./Intro_to_Attitude.tex
 (Intro_to_Attitude.tex
@@ -181,29 +181,29 @@ Chapter 2.
 [4
 
 ]
-<./images//shuttle_body_frame.jpg, id=22, 197.73875pt x 256.96pt>
+<./images//shuttle_body_frame.jpg, id=24, 197.73875pt x 256.96pt>
 File: ./images//shuttle_body_frame.jpg Graphic file (type jpg)
 <use ./images//shuttle_body_frame.jpg>
-Package pdftex.def Info: ./images//shuttle_body_frame.jpg  used on input line 6
-0.
+Package pdftex.def Info: ./images//shuttle_body_frame.jpg  used on input line 5
+7.
 (pdftex.def)             Requested size: 113.81102pt x 147.89592pt.
-<./images//ecef.png, id=23, 502.87875pt x 502.87875pt>
+<./images//ecef.png, id=25, 502.87875pt x 502.87875pt>
 File: ./images//ecef.png Graphic file (type png)
 <use ./images//ecef.png>
-Package pdftex.def Info: ./images//ecef.png  used on input line 60.
+Package pdftex.def Info: ./images//ecef.png  used on input line 57.
 (pdftex.def)             Requested size: 147.94893pt x 147.95424pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--67
+Underfull \hbox (badness 10000) in paragraph at lines 60--64
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--67
+Underfull \hbox (badness 10000) in paragraph at lines 60--64
 
  []
 
 [5 <./images//shuttle_body_frame.jpg> <./images//ecef.png>]
-Overfull \hbox (2.33075pt too wide) in paragraph at lines 80--81
+Overfull \hbox (2.33075pt too wide) in paragraph at lines 77--78
 []\OT1/cmr/bx/n/14.4 At/near the sin-gu-lar-i-ties, the kine-matic dif-fer-en-t
 ial equa-
  []
@@ -213,41 +213,41 @@ Chapter 3.
 [7
 
 ]
-<./images//dcmalpha.jpg, id=35, 942.4008pt x 895.4253pt>
+<./images//dcmalpha.jpg, id=36, 942.4008pt x 895.4253pt>
 File: ./images//dcmalpha.jpg Graphic file (type jpg)
 <use ./images//dcmalpha.jpg>
-Package pdftex.def Info: ./images//dcmalpha.jpg  used on input line 120.
+Package pdftex.def Info: ./images//dcmalpha.jpg  used on input line 117.
 (pdftex.def)             Requested size: 199.16928pt x 189.23355pt.
  [8 <./images//dcmalpha.jpg>] [9]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-54.
+51.
 
 (C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 154.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 151.
 
 [10]
-Overfull \hbox (13.35614pt too wide) in paragraph at lines 192--193
+Overfull \hbox (13.35614pt too wide) in paragraph at lines 189--190
 []\OT1/cmr/m/n/14.4 Using vet-ri-ces with or-thog-o-nal vec-tors is con-ven-tio
 n be-cause they're
  []
 
 [11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 215--241
+Underfull \hbox (badness 10000) in paragraph at lines 212--238
 
  []
 
 [13]
 Chapter 4.
-<./images//euler_proper.jpg, id=59, 620.3175pt x 231.86626pt>
+<./images//euler_proper.jpg, id=60, 620.3175pt x 231.86626pt>
 File: ./images//euler_proper.jpg Graphic file (type jpg)
 <use ./images//euler_proper.jpg>
-Package pdftex.def Info: ./images//euler_proper.jpg  used on input line 258.
+Package pdftex.def Info: ./images//euler_proper.jpg  used on input line 255.
 (pdftex.def)             Requested size: 455.24408pt x 170.16313pt.
 
-Overfull \hbox (25.24408pt too wide) in paragraph at lines 258--259
+Overfull \hbox (25.24408pt too wide) in paragraph at lines 255--256
  [] 
  []
 
@@ -255,15 +255,21 @@ Overfull \hbox (25.24408pt too wide) in paragraph at lines 258--259
 
 ] [15 <./images//euler_proper.jpg>] [16] [17]
 Chapter 5.
-<./images//PRV1.png, id=72, 264.99pt x 276.232pt>
+
+Overfull \hbox (0.97025pt too wide) in paragraph at lines 320--321
+[]\OT1/cmr/m/n/14.4 First, let's in-ter-nal-ize \OT1/cmr/m/it/14.4 Eu-ler's Pri
+n-ci-pal Ro-ta-tion The-o-rem\OT1/cmr/m/n/14.4 . it states: 
+ []
+
+<./images//PRV1.png, id=73, 264.99pt x 276.232pt>
 File: ./images//PRV1.png Graphic file (type png)
 <use ./images//PRV1.png>
-Package pdftex.def Info: ./images//PRV1.png  used on input line 330.
+Package pdftex.def Info: ./images//PRV1.png  used on input line 327.
 (pdftex.def)             Requested size: 227.62204pt x 237.2809pt.
 [18
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 335--336
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
 
  []
 
@@ -283,43 +289,45 @@ Chapter 8.
 Chapter 9.
 [24
 
-]
+] [25]
 Chapter 10.
-[25
-
-]
-Chapter 11.
 [26
 
 ]
-Chapter 12.
+Chapter 11.
 [27
+
+]
+Chapter 12.
+[28
 
 ] (Intro_to_Attitude.aux) ) 
 Here is how much of TeX's memory you used:
- 2010 strings out of 480236
- 30827 string characters out of 2880557
+ 2020 strings out of 480236
+ 30938 string characters out of 2880557
  304412 words of memory out of 3000000
- 18570 multiletter control sequences out of 15000+200000
- 545792 words of font info for 65 fonts, out of 3000000 for 9000
+ 18576 multiletter control sequences out of 15000+200000
+ 547276 words of font info for 70 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,9n,66p,588b,192s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/brian/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/brian/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/brian/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/brian/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/brian/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Use
-rs/brian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.p
-fb><C:/Users/brian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmr10.pfb><C:/Users/brian/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmr12.pfb><C:/Users/brian/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmr17.pfb><C:/Users/brian/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/brian/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Intro_to_Attitude.pdf (28 pages, 865616 bytes).
+ 60i,9n,66p,603b,192s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\brian\AppData\Local\MiKTeX\fonts/pk/ljfou
+r/jknappen/ec/dpi600\tcrm1440.pk><C:/Users/brian/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/brian/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/brian/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/brian/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/
+brian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+C:/Users/brian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmm
+ib10.pfb><C:/Users/brian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb><C:/Users/brian/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb><C:/Users/brian/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmr17.pfb><C:/Users/brian/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/brian/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/brian/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Intro_to_Attitude.pdf (29 pages, 888900 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
+ 155 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
