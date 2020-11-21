@@ -3,12 +3,14 @@
 %CONVENIENT COMMANDS
 \newcommand{\bv}[1]{\hat{b_{#1}}}
 \newcommand{\nv}[1]{\hat{n_{#1}}}
+\newcommand{\vk}[1]{\prescript{#1}{}{\hat{v_k}}}
 
 %PACKAGES
 %Graphics
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
 %Math
+\usepackage{mathtools}
 \usepackage{amsmath}
 \usepackage{bm}
 
@@ -23,7 +25,7 @@
 \tableofcontents{}
 \chapter{Preface}
 \section{Prerequisites}
-You're welcome to dive in and learn as you go, but knowing some \textbf{Physics 1/Dynamics} and \textbf{Linear Algebra} will help immensely. Honestly, with how applicable it is, you should just learn linear algebra in general. A class at the undergraduate level should more than enough. If you're dedicated enough, there's also plenty of online classes that you can take.
+You're welcome to dive in and learn as you go, but knowing some \textbf{Physics 1/Dynamics}, \textbf{Calculus 1-3, Diff Eq} and \textbf{Linear Algebra} will help immensely. Honestly, with how applicable it is, you should just learn linear algebra in general. Classes at the undergraduate level should more than enough. If you're dedicated enough, there's also plenty of online classes that you can take.
 
 \section{Message to the Reader}
 At the time of writing this, I am not a seasoned spacecraft engineer nor a cutting edge researcher (well, fingers crossed). For now, I'm just a green undergrad in Aerospace Engineering, hoping that my understanding  will help you out. I hope you learn something new and feel a little more comfortable in this field.
@@ -58,7 +60,7 @@ When I say reference frame, or frames in general, I mean coordinate frames: XYZ,
 A Frame on the Space Shuttle (L) \\ ECEF (Earth Centered, Earth Fixed) Frame (R)
 \end{center}
 \textbf{BODY: Refers to object of interest (e.g. spacecraft, satellite)}\\
-When someone says "Body Frame" that refers to the frame glued to your satellite, space shuttle, UFO, rover. Basically, the thing you're trying to keep track of.\\\\
+When someone says "Body Frame", that refers to the frame glued to your satellite, space shuttle, UFO, rover. Basically, the thing you're trying to keep track of.\\\\
 \textbf{INERTIAL: Refers to reference (e.g. Earth)}\\
 When someone says inertial frame, they always mean reference. In most basic problems, the Earth and its variety of frames is what you'll refer to as inertial. However, you can also set the inertial frame to something that's not the Earth, like the ISS.\\
 
@@ -66,7 +68,7 @@ When someone says inertial frame, they always mean reference. In most basic prob
 I must emphasize that \emph{attitude is all relative}. Without knowing and specifying a reference frame, the description of your attitude is basically useless. 
 
 \subsection{Why Worry About Attitude Anyways?}
-Trying to brush off attitude determination as unimportant is similar to asking "Why do planes have to be headed in the right direction?". Depending on the project/mission, the importance of making sure your object is pointed in the desired direction ranges anywhere from marginal (super basic cubesats) or critical (space telescopes, comms satellites, space shuttle). But 9 times out of 10, attitude is pretty high on the priority list. This topic also has plenty of applications outside of the aero sphere, such as in video games, robotics, and biomechanics.
+Trying to brush off attitude determination as unimportant is similar to asking "Why do planes have to be headed in the right direction?". Depending on the project/mission, the importance of making sure your object is pointed in a desired direction ranges anywhere from marginal (super basic cubesats) or critical (space telescopes, comms satellites, space shuttle). But 9 times out of 10, attitude is pretty high on the priority list. This topic also has plenty of applications outside of the aero sphere, such as in video games, robotics, and biomechanics.
 
 \section{4 Basic Truths}
 \begin{enumerate}
@@ -76,7 +78,7 @@ Trying to brush off attitude determination as unimportant is similar to asking "
 
 \item \textbf{At/near the singularities, the kinematic differential equations are also singular.} When you get close to a singularity in your attitude description, the kinematic differential equations of your attitude description also turn feral. These won't be too heavily covered in this text so don't worry too much about them.
 
-\item \textbf{Redundant sets of 4 or more coordinates exist that are universally valid.}
+\item \textbf{There exists redundant sets of 4 or more coordinates that are universally valid.}
 
 \end{enumerate}
 \chapter{DCM}
@@ -89,7 +91,7 @@ It doesn't stand for dichloromethane. And please, don't call it a DCM matrix.
 
 We consider the DCM the ``mother of all attitude parameterizations", quoting Professor Schaub. When I mean \emph{attitude parameterization}, I mean descriptions of your attitude, such as quaternions, Euler angles, etc. Every DCM maps to a parameterization of your choice and every parameterization maps back to a DCM. You could say it's the center of the great web of parameterizations. With DCMs, we directly interact with the basis vectors of the frames themselves. Before we move any further, let's get some \emph{formalisms} out of the way.
 \subsection{Funky Formalisms}
-When describing the body frame, I'll use the letter b. Describing the basis vectors that make up the body frame, I'll say $\bv{1}, \bv{2}, \bv{3}$. Likewise, describing the inertial frame basis vectors uses the letter n, like so: $\nv{1}, \nv{2}, \nv{3}$. Constantly writing out $\bv{1}, \bv{2}, \bv{3}$ is gonna get old real fast, so lets save our hands some work and assemble them into something called a \emph{vectrix}.
+When describing the body frame, I'll use the letter $b$. Describing the basis vectors that make up the body frame, I'll say $\bv{1}, \bv{2}, \bv{3}$. Likewise, describing the inertial frame basis vectors uses the letter $n$, like so: $\nv{1}, \nv{2}, \nv{3}$. Constantly writing out $\bv{1}, \bv{2}, \bv{3}$ is gonna get old real fast, so lets save our hands some work and assemble them into something called a \emph{vectrix}.
 \[
 \{\hat{b}\} = 
 \begin{bmatrix}
@@ -188,17 +190,17 @@ A consequence of the above. Not exactly hard to see why.
 
 Using vetrices with orthogonal vectors is convention because they're mathematically friendly. The fact that a DCM is orthogonal is the reason we can use the transpose to transform backwards from body to inertial. The inverse of an orthogonal matrix is just its transpose after all.
 
-\item{\textbf{The determinant of a DCM is $1$ (Unit, Orthogonal, and Right Handed)}}
+\item{\textbf{The determinant of a DCM is $\pm 1$ (Unit, Orthogonal)}}
 
-This property is essentially a result of the previous properties piled together. A unit orthogonal matrix has a determinant of $\pm 1$. Why $\pm 1$ you ask? Well the sign of the determinant indicates the handedness of the DCM. A +1 indicates a right handed frame and -1 is a left handed frame. A left handed frame technicallyyyyy isn't wrong, but right handed frames are convention. For the sake of consistency, let's just say DCMs are right handed.
+This property is essentially a result of the previous properties piled together. A unit orthogonal matrix has a determinant of $\pm 1$. Why $\pm 1$ you ask? Well the sign of the determinant indicates the handedness of the DCM. A +1 indicates a right handed frame and -1 is a left handed frame. A left handed frame technicallyyyyy isn't wrong, but right handed frames are convention. That's why right handed frames are referred to as ``proper" and left, ``improper".
 
 \item{\textbf{DCMs are non-singular!}}
 
 There's no divisions by zero, no weird functions, and since we're working at the lowest level, not many ambiguities can arise.
 \end{enumerate}
 
-\subsection{Wait a minute...}
-If DCMs are non-singular, why don't we exclusively use them to describe attitude? While DCMs are great and non-singular, they're not always the easiest/intuitive paramaterization to use. 
+\subsection{Wait a Minute...}
+If DCMs are non-singular, why don't we exclusively use them to describe attitude? While DCMs are lovely and non-singular, they're not always the easiest/intuitive paramaterization to use. 
 
 
 The sheer amount of elements in the DCM is not very convenient. 9 elements to keep track of attitude? With properties that we constantly have to enforce? Tacking on angular velocity $\omega$ and multiple frames, the amount of numbers flying around can quickly get out of hand.
@@ -283,19 +285,19 @@ Euler Angles relate to DCMs pretty seamlessly. We can represent each individual 
 
 But how do we represent rotations around axes as DCMs?:
 \begin{center}
-Rotation around axis 1 (X):
+Rotation matrix around axis 1 (X):
 \[[R_1(\theta)] = \begin{bmatrix}
 			1&0&0\\
 			0&\cos{\theta}&\sin{\theta}\\
 			0&-\sin{\theta}&\cos{\theta}
 	\end{bmatrix}\]	
-Rotation around axis 2 (Y):
+Rotation matrix around axis 2 (Y):
 \[[R_2(\theta)] = \begin{bmatrix}
 		\cos{\theta}&0&-\sin{\theta}\\
 		0&1&0\\
 		\sin{\theta}&0&\cos{\theta}
 	\end{bmatrix}\]
-Rotation around axis 3 (Z):
+Rotation matrix around axis 3 (Z):
 \[[R_3(\theta)] = \begin{bmatrix}
 		\cos{\theta}&\sin{\theta}&0\\
 		-\sin{\theta}&\cos{\theta}&0\\
@@ -307,15 +309,15 @@ To get the full DCM of a $\alpha\beta\gamma$ Euler set:
 \end{center}
 (Depending who you work with, $\theta_1,\theta_2,\theta_3$ is the same as $\phi,\theta,\psi$, respectively. It'll vary with who you ask, just make sure you clarify.)
 \section{DCMs to Euler Angles}
-Converting from DCMs to Euler Angles is a more involved process, due to the large variety of sets.
+Converting from DCMs to Euler angles is a more involved process, due to the large variety of sets.
 \section{Singularities}
-
+As you've probably heard, Euler angles are prone to throwing singularities when rotated in certain ways.
 \section{Test Your Knowledge}
 
 \chapter{Principal Rotation Vectors}
 \section{Definitions and Things}
 
-Euler Angles are great, but you \emph{really} don't wanna use them for spacecraft and other body frames that can tumble head over heels. Moving away from the world of Euler angles, let's try something new. 
+Euler Angles are great, but you \emph{really} don't wanna use them for spacecraft or other body frames that can tumble head over heels. Let's try something new and move away from the world of Euler angles. 
 
 First, let's internalize \emph{Euler's Principal Rotation Theorem}. it states:
 
@@ -367,17 +369,35 @@ e_1\\e_2\\e_3\\
 C_{23}-C_{32}\\C_{31}-C_{13}\\C_{12}-C_{21}\\
 \end{bmatrix}
 \]
-\chapter{The Quaternion}
-Googling ``quaternion math" will probably scare you, unless you're a math major. Taken in the context of PRVs however, they're actually pretty straightforward. They're probably one of the most popular non-singular attitude descriptors out there. 
+\chapter{Quaternions/EPs}
+\section{Definitions and Things}
+Googling ``quaternion math" will probably scare you, so let's leave all that fancy stuff for the math majors. Taken in the context of PRVs however, they're actually pretty straightforward.
 
-Just to get this out of the way, you'll probably hear the term ``Euler Parameters" being used (EPs for short) and you might wonder what the difference is. Quaternions are the mathematical construct and Euler Parameters are the \emph{coefficients} of the quaternion. 
+Just to get this out of the way, you'll probably hear the term ``Euler Parameters" being used (EPs for short) and you might wonder what the difference is. Quaternions are the mathematical construct and Euler Parameters are the \emph{coefficients} of the quaternion.\\
  
 \subsection{Well, what is a quaternion?}
 Quaternions form a number system that extends the complex number system. It was invented by William Rowan Hamilton back in 1843, after having an epiphany on a bridge near his home in Ireland. They're usually represented with 4 terms:
 \[
 a + bi + cj + dk
 \]
-Where a,b,c,d are the real coefficients and i,j,k well... aren't. I'm not gonna go too in the weeds with this since I'm not qualified enough to say more.
+Where a,b,c,d are the real coefficients and i,j,k are complex. I'm not gonna go too deep into this since I'm certainly not qualified enough to say more.
+
+\subsection{Defining EPs}
+As you probably know, quaternions involve 4 terms. We'll refer to them as:
+\[<\beta_0,\beta_1,\beta_2,\beta_3>\]
+Where $\beta_0$ is the real term. The nomenclature will change according to who you ask, so just make sure you clarify.
+
+Referring back to PRVs, we can define the EPs as:
+
+\[\beta_0 = cos(\phi/2)\]
+\[\beta_1 = e_1 sin(\phi/2)\]
+\[\beta_2 = e_2 sin(\phi/2)\]
+\[\beta_3 = e_3 sin(\phi/2)\]
+
+\subsection{Constraints}
+EPs have only 1 constraint, which is the following:\
+
+\[\beta_0^2+\beta_1^2+\beta_2^2+\beta_3^2=1\]
 
 \chapter{Attitude Determination?}
 Now that you got a good chunk of the preliminaries out of the way, let's get into how it's applied. The whole idea of \emph{Attitude Determination} is broken up into 2 types of problems:
@@ -398,28 +418,29 @@ TRIAD is great and all, but what if we want to make use of all the sensors we ha
 
 \emph{Wahba's problem} was a question posed by the venerable Grace Wahba back in 1965. It goes a little like this:
 \subsection{Defining Wahba's Problem}
-Assume that we have $N>1$ measurement vectors in body frame ($\hat{v}_k^B$) and their corresponding measurement vectors in inertial frame($\hat{v}_k^N$). Attitude determination is basically a problem of finding a $[BN]$ that converts the inertial measurements to the body measurements like so:
+Assume that we have $n>1$ measurement vectors in body frame ($\vk{B}$) and their corresponding measurement vectors in inertial frame ($\vk{N}$). Attitude determination is basically a problem of finding a $[BN]$ that converts the inertial measurements to the body measurements like so:
 \begin{center}
 \[
-\hat{v}_k^B = [\tilde{B}N]\hat{v}_k^N 
+\vk{B}= [\tilde{B}N]\vk{N}
 \]
-for k = 1,2, ... N
+for k = 1,2, ... n
 \end{center}
-Nothing we don't know. However, the real world is mathematically cruel. You will never find a $[\tilde{B}N]$ matrix that perfectly maps from inertial to body. This is usually due to imperfect sensors making imperfect measurement vectors. 
+Nothing we don't know (see 3.2.1). However, the real world is mathematically cruel. You will never find a $[\tilde{B}N]$ matrix that perfectly maps from inertial to body, hence the little tilde on the B. This is usually due to imperfect sensors giving imperfect measurement vectors. 
 
-Well, what do we do now? If we can't acquire a perfect [BN] , then we should at least try finding [BN] a that maps our inertial measurements as closely as possible to our body measurements. 
+Well, what do we do now? If we can't acquire a perfect [BN], then we should at least try finding a [BN] that maps our inertial measurements as closely as possible to our body measurements. 
 
-So Grace Wahba said ``Hey, why don't we try to minimize this loss function to get the best possible [BN] matrix?"\footnote{I'm pretty sure she didn't actually say this, just roll with it.}:
+So Wahba proposed, ``Hey, why don't we try to minimize this loss function to get the best possible [BN] matrix?"\footnote{I'm pretty sure she didn't actually say this, just roll with it.}:
 
 \[
 \mathbf{
-J([\tilde{B}N]) = \dfrac{1}{2} \sum^N_{k=1} w_k |\hat{v}_k^B - [\tilde{B}N]\hat{v}_k^N|^2}
+J([\tilde{B}N]) = \dfrac{1}{2} \sum^n_{k=1} w_k |\vk{B} - [\tilde{B}N]\vk{N}|^2}
 \]
 
 Let's break this down.
 \begin{itemize}
-\item{$J([\tilde{B}N])$: This describes the overall error of the [BN] matrix we're looking at. Smaller J = Better [BN].}
-\item{$w_k$: This is a \emph{weighting value} assigned to that kth measurement vector. You typically assign this yourself. Higher weights are assigned to more reliable sensors. For example, you would assign a higher weight to a sun sensor or star tracker vs a magnetometer. Note that only relative sizes of the weight values matter, the values themselves don't really matter.
+\item{$J([\tilde{B}N])$: This describes the overall error of the [BN] matrix we're looking at. Smaller J = Better [BN].
+}
+\item{$w_k$: This is a \emph{weighting value} assigned to that kth measurement vector. You typically assign this yourself. Higher weights are assigned to more reliable sensors. For example, you would assign a higher weight to a sun sensor or star tracker vs a magnetometer. Note that only relative sizes of the weight values matter, the actual values themselves don't really matter.
 }
 \item{$\hat{v}_k^B - [\tilde{B}N]\hat{v}_k^N$: This describes the error between the kth body measurement and the corresponding kth mapped inertial measurement.}
 \end{itemize}
@@ -429,13 +450,105 @@ When you boil it down, it's basically a fancier least squares fit. Finding a sol
 \subsection{Well, How Do We Solve It?}
 Actually, there's no one definitive way to solve this. In addition, clever mathematicians and engineers are still coming up with solutions.
 \chapter{Davenport's Q}
+The first solution to Wahba's problem we're gonna look at is called Davenport's Q. Paul B. Davenport came up with this quaternion based method in 1968. It is an older method, but it is a precursor to other methods out there, like QUEST. 
+
+Beware, this chapter will get a bit math heavy. If you don't feel like looking at the derivation, just check out the ``In a Nutshell" section and cherry pick the formulas.
+
+\subsection{Wahba's Problem in Another Light}
+Instead of outright trying to minimize J, we can twist Wahba's problem into another form, in which we can minimize a value called the "gain". Let's see how it's done. 
+
+This is the normal definition of Wahba's problem.
+\[
+J([\tilde{B}N]) = \dfrac{1}{2} \sum^n_{k=1} w_k |\vk{B} - [\tilde{B}N]\vk{N}|^2
+\]
+That squared part in the right hand side is the same as taking a dot product, so let's just replace it:
+\[
+J([\tilde{B}N]) = \dfrac{1}{2} \sum^n_{k=1} w_k (\vk{B} - [\tilde{B}N]\vk{N})^T(\vk{B} - [\tilde{B}N]\vk{N})
+\]
+Evaluating this dot product mish mash gives us:
+\[
+J([\tilde{B}N]) = \dfrac{1}{2} \sum^n_{k=1} w_k (\vk{B}^T\vk{B}+\vk{N}^T\vk{N}-2\vk{B}^T[\tilde{B}N]\vk{N})
+\]
+Continuing to evaluate and simplify gives us:
+\[
+J([\tilde{B}N]) = \sum^n_{k=1} w_k (1- \vk{B}^T[\tilde{B}N]\vk{N})
+\]
+Don't worry, this is just Wahba's cost function, just in a different form. We still want to minimize J so how do we go about this? We'll have to maximize $$\vk{B}^T[\tilde{B}N]\vk{N}$$ We remake this as the \textbf{``gain"}:
+\[
+\mathbf{
+g = \sum^n_{k=1} w_k (\vk{B}^T[\tilde{B}N]\vk{N})}
+\]
+\emph{In order to minimize J, we have to maximize the gain, g.}
+
+\section{Davenport's Method}
+Davenport developed the following way to get a gain function in the context of quaternions. Bear with me, this is quite the batch of equations.
+
+\[
+[B] = \sum^N_{k=1} w_k\vk{B}\vk{N}^T
+\]
+\[
+[Z] = [(B_{23}-B_{32}), (B_{31}-B_{13}), (B_{12}-B_{21})]^T
+\]
+\[
+\sigma = trace([B])
+\]
+\[
+[S] = [B]+[B]^T
+\]
+\[
+[K] =
+\begin{bmatrix}
+\sigma && Z^T \\ Z && S-\sigma  [I_{3x3}]
+\end{bmatrix}
+\]
+Finally,
+\[
+g(\tilde{\beta}) = \bar{\beta}^T[K]\bar{\beta}
+\]
+Where
+\[\bar{\beta} = <\beta_0,\beta_1,\beta_2,\beta_3>\]
+\subsection{Maximizing the Gain?}
+We are still trying to maximize gain, so we could simply go ``Let's just boost $\bar{\beta}$ to infinity". While a good first thought, this won't work since we have to honor the \emph{constraint} that EPs must be unit length. This has turned into a constrained optimization problem. A good way to solve constrained optimization problems is via Lagrange Multipliers, as you may (or may not) remember from Calc 3. Let's represent our Lagrangified gain formula as $g'$.
+\[
+g'(\bar{\beta}) = \underbracket{\bar{\beta}^T[K]\bar{\beta}}_{g} - \underbracket{\lambda(\bar{\beta}^T\bar{\beta}-1)}_{constraint}
+\]
+We'll need to differentiate $g'$ in order to find the extremum:
+\[
+\dfrac{d(g'(\bar{\beta}))}{d\bar{\beta}} = 2[K]\bar{\beta} - 2\lambda\bar{\beta}=0
+\]
+As you can clearly see, what comes out is an eigenvector problem:
+\[
+[K]\bar{\beta}=\lambda\bar{\beta}
+\]
+Well, what does this mean for us? The gain formula just turns into:
+\[
+g(\bar{\beta}) = \bar{\beta}^T[K]\bar{\beta} = \bar{\beta}^T\lambda\bar{\beta} = \lambda
+\]Therefore, the optimal EP set is the eigenvector associated with the largest eigenvalue of K.
+\section{In a Nutshell}
+
+To summarize, Davenport's Q boils down to the following:
+\begin{enumerate}
+\item{Compute the [K] matrix}
+\item{Find the eigenvalues and eigenvectors of said [K] matrix}
+\item{Choose the largest eigenvalue + corresponding eigenvector}
+\item{This eigenvector is your set of EPs}
+\end{enumerate}
+%[BN] in terms of quaternions is:
+%\[
+%[BN] = (\beta_0^2 - \epsilon^T\epsilon)[I_{3x3}]+2\epsilon\epsilon^T-2\beta_0[\tilde{\epsilon}]
+%\]
+%\[
+%\epsilon = (\beta_1,\beta_2,\beta_3)
+%\]
 
 \chapter{QUEST}
-Davenport's Q is lovely, but computationally, solving that eigenvector problem is pretty expensive. How about we bypass that eigenvector problem completely?
+Devenport's Q is lovely, but computationally, solving that eigenvector problem is pretty expensive. How about we bypass that eigenvector problem completely?
 \chapter{Answer Key}
 \section{Chapter 1 DCM}
 \begin{enumerate}
 \item{a \& b}
 \item{$[KB]^T[KJ][NJ]^T$}
+
+
 \end{enumerate}
 \end{document}
