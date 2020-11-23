@@ -51,7 +51,7 @@ A body just refers to something like a plane, spacecraft, or satellite. Angular 
 
 Let me pose this question to you. If you're floating around in an infinite black void, how do you decide which way is up? or down? Of course, the problem is a bit more complex than that, but it's a question you can't answer without the help of a \textit{reference frame}.
 
-\subsection{Frames?}
+\section{Frames?}
 
 When I say reference frame, or frames in general, I mean coordinate frames: XYZ, \(\hat{i}\hat{j}\hat{k}\), 3 basis vectors, etc. You can pretty much glue a coordinate frame onto anything your heart desires. Attaching frames to things helps ground them in a mathematical context, and that helps in more reasons than I can name. For example, it's a lot easier to say things like "I'm about 10 meters south and 1 meter east of you with respect to your NED frame". This is just a rough example, but there are plenty of other good reasons to put frames on bodies.
 
@@ -64,25 +64,31 @@ When someone says "Body Frame", that refers to the frame glued to your satellite
 \textbf{INERTIAL: Refers to reference (e.g. Earth)}\\
 When someone says inertial frame, they always mean reference. In most basic problems, the Earth and its variety of frames is what you'll refer to as inertial. However, you can also set the inertial frame to something that's not the Earth, like the ISS.\\
 
-\subsection{It's All Relative}
+\section{It's All Relative}
 I must emphasize that \emph{attitude is all relative}. Without knowing and specifying a reference frame, the description of your attitude is basically useless. 
 
-\subsection{Why Worry About Attitude Anyways?}
-Trying to brush off attitude determination as unimportant is similar to asking "Why do planes have to be headed in the right direction?". Depending on the project/mission, the importance of making sure your object is pointed in a desired direction ranges anywhere from marginal (super basic cubesats) or critical (space telescopes, comms satellites, space shuttle). But 9 times out of 10, attitude is pretty high on the priority list. This topic also has plenty of applications outside of the aero sphere, such as in video games, robotics, and biomechanics.
+\section{Why Worry About Attitude Anyways?}
+Asking why attitude as important is similar to asking "Why do planes have to be headed in the right direction?". Depending on the project/mission, the importance of making sure the body is pointed in a desired direction ranges anywhere from marginal (super basic cubesats) or critical (space telescopes, comms satellites, space shuttle). But 9 times out of 10, attitude is pretty high on the priority list. This topic also has plenty of appearances outside of the aero sphere, such as in video games, robotics, computer vision, and biomechanics.
 
 \section{4 Basic Truths}
 \begin{enumerate}
-\item \textbf{You need a minimum of 3 coordinates to describe relative angular displacement in 3D.} There's likely some in-depth proof showing why this is the case, but I'm not qualified enough to comment on it. The most popular example of a 3 coordinate set is Euler Angles.
+\item \textbf{You need a minimum of 3 coordinates to describe relative angular displacement in 3D.} 
 
-\item \textbf{A 3 coordinate set will have at least 1 geometric orientation where the coordinates are \underline{singular}.} When an attitude description becomes \textbf{singular}, it's best described as acting ... weird. As in, the math doesn't behave very nicely (divisions by 0, non-uniqueness, etc.). As a real life example, think gimbal lock. The gimbal, when turned a certain way, loses degrees of freedom.
+There's likely some in-depth proof showing why this is the case, but I'm not qualified enough to comment on it. The most popular example of a 3 coordinate set is Euler Angles.
 
-\item \textbf{At/near the singularities, the kinematic differential equations are also singular.} When you get close to a singularity in your attitude description, the kinematic differential equations of your attitude description also turn feral. These won't be too heavily covered in this text so don't worry too much about them.
+\item \textbf{A 3 coordinate set will have at least 1 geometric orientation where the coordinates are \underline{singular}.} 
+
+When an attitude description becomes \textbf{singular}, it's best described as acting ... weird. As in, the math doesn't behave very nicely (divisions by 0, non-uniqueness, etc.). As a real life example, think gimbal lock. The gimbal, when turned a certain way, loses degrees of freedom.
+
+\item \textbf{At/near the singularities, the kinematic differential equations are also singular.} 
+
+When you get close to a singularity in your attitude description, the kinematic differential equations of your attitude description also turn feral. These won't be too heavily covered in this text so don't worry too much about them.
 
 \item \textbf{There exists redundant sets of 4 or more coordinates that are universally valid.}
 
 \end{enumerate}
 \chapter{DCM}
-\section{Definitions and Things}
+
 It doesn't stand for dichloromethane. And please, don't call it a DCM matrix.
 
 \begin{center}
@@ -90,7 +96,7 @@ It doesn't stand for dichloromethane. And please, don't call it a DCM matrix.
 \end{center}
 
 We consider the DCM the ``mother of all attitude parameterizations", quoting Professor Schaub. When I mean \emph{attitude parameterization}, I mean descriptions of your attitude, such as quaternions, Euler angles, etc. Every DCM maps to a parameterization of your choice and every parameterization maps back to a DCM. You could say it's the center of the great web of parameterizations. With DCMs, we directly interact with the basis vectors of the frames themselves. Before we move any further, let's get some \emph{formalisms} out of the way.
-\subsection{Funky Formalisms}
+\section{Funky Formalisms}
 When describing the body frame, I'll use the letter $b$. Describing the basis vectors that make up the body frame, I'll say $\bv{1}, \bv{2}, \bv{3}$. Likewise, describing the inertial frame basis vectors uses the letter $n$, like so: $\nv{1}, \nv{2}, \nv{3}$. Constantly writing out $\bv{1}, \bv{2}, \bv{3}$ is gonna get old real fast, so lets save our hands some work and assemble them into something called a \emph{vectrix}.
 \[
 \{\hat{b}\} = 
@@ -142,6 +148,7 @@ b_3 \cdot n_1 & b_3 \cdot n_2 & b_3 \cdot n_3
 \end{bmatrix} \{\hat{n}\} = [BN] \{\hat{n}\}
 \]
 We'll call this matrix [BN]. The BN matrix we have here is the \emph{Direction Cosine Matrix}. It doesn't take a rocket scientiest to see that the ``Direction Cosine" part of the name comes from all these cosines. DCMs are basically glorified rotation matrices.
+
 \subsection{Well, Whats The Point?}
 Glad you asked. Here's a situation: You are on Earth and your friend is on a spaceship in orbit. You just saw a really cool star and want to radio up to your friend where to look, with respect to their frame. You know the DCM that converts from your frame to theirs. How would you achieve this?
 
@@ -242,8 +249,6 @@ However, the DCM is super useful for translating between attitude parameterizati
 
 \chapter{Euler Angles}
 
-\section{Definitions and Things}
-
 If you've heard of yaw pitch or roll, you've most certainly heard of Euler Angles.
 \begin{center}
 \textbf{EULER ANGLES: A parameterization that describes attitude in 3 sequential rotations.}
@@ -315,11 +320,8 @@ As you've probably heard, Euler angles are prone to throwing singularities when 
 \section{Test Your Knowledge}
 
 \chapter{Principal Rotation Vectors}
-\section{Definitions and Things}
 
-Euler Angles are great, but you \emph{really} don't wanna use them for spacecraft or other body frames that can tumble head over heels. Let's try something new and move away from the world of Euler angles. 
-
-First, let's internalize \emph{Euler's Principal Rotation Theorem}. it states:
+Euler Angles are great, but you \emph{really} don't wanna use them for spacecraft or other body frames that can tumble head over heels. Let's try something new, something called a \emph{Principal Rotation Vector}. First, let's internalize \emph{Euler's Principal Rotation Theorem}. it states:
 
 \begin{center}
 \textbf{THEOREM: A rigid body can be brought from a start to an end orientation by a single rigid rotation ($\phi$ rad/deg) around some principal axis ($\hat{e}$). This principal axis is fixed in both the start and end orientation.}
@@ -370,19 +372,19 @@ C_{23}-C_{32}\\C_{31}-C_{13}\\C_{12}-C_{21}\\
 \end{bmatrix}
 \]
 \chapter{Quaternions/EPs}
-\section{Definitions and Things}
+
 Googling ``quaternion math" will probably scare you, so let's leave all that fancy stuff for the math majors. Taken in the context of PRVs however, they're actually pretty straightforward.
 
 Just to get this out of the way, you'll probably hear the term ``Euler Parameters" being used (EPs for short) and you might wonder what the difference is. Quaternions are the mathematical construct and Euler Parameters are the \emph{coefficients} of the quaternion.\\
  
-\subsection{Well, what is a quaternion?}
+\section{Well, What is a Quaternion?}
 Quaternions form a number system that extends the complex number system. It was invented by William Rowan Hamilton back in 1843, after having an epiphany on a bridge near his home in Ireland. They're usually represented with 4 terms:
 \[
 a + bi + cj + dk
 \]
-Where a,b,c,d are the real coefficients and i,j,k are complex. I'm not gonna go too deep into this since I'm certainly not qualified enough to say more.
+Where a,b,c,d are real coefficients and i,j,k are complex. I'm not gonna go too deep into this since I'm certainly not qualified enough to say more.
 
-\subsection{Defining EPs}
+\section{Defining EPs from PRVs}
 As you probably know, quaternions involve 4 terms. We'll refer to them as:
 \[<\beta_0,\beta_1,\beta_2,\beta_3>\]
 Where $\beta_0$ is the real term. The nomenclature will change according to who you ask, so just make sure you clarify.
@@ -394,12 +396,49 @@ Referring back to PRVs, we can define the EPs as:
 \[\beta_2 = e_2 sin(\phi/2)\]
 \[\beta_3 = e_3 sin(\phi/2)\]
 
-\subsection{Constraints}
+\section{Constraints}
 EPs have only 1 constraint, which is the following:\
 
 \[\beta_0^2+\beta_1^2+\beta_2^2+\beta_3^2=1\]
 
+In math words, this tells us that EPs live on a \emph{unit hypersphere}. Quaternions aren't actually limited to being unit length, but that's a whole nother can of worms that most engineers don't bother opening.
+\section{EPs to DCM}
+Converting an EP set to a DCM involves the following:
+\[
+[C] = 
+\begin{bmatrix}
+\beta_0^2+\beta_1^2-\beta_2^2-\beta_3^2&&2(\beta_1\beta_2+\beta_0\beta_3)&&2(\beta_1\beta_3-\beta_0\beta_2\\
+2(\beta_1\beta_2-\beta_0\beta_3)&&\beta_0^2-\beta_1^2+\beta_2^2-\beta_3^2&&2(\beta_2\beta_3+\beta_0\beta_1)\\2(\beta_1\beta_3+\beta_0\beta_2)&&2(\beta_2\beta_3-\beta_0\beta_1)&&\beta_0^2-\beta_1^2-\beta_2^2+\beta_3^2
+\end{bmatrix}
+\]
+If you want a cleaner looking formula,
+\[
+[BN] = (\beta_0^2 - \epsilon^T\epsilon)[I_{3x3}]+2\epsilon\epsilon^T-2\beta_0[\tilde{\epsilon}]
+\]
+\[
+\epsilon = (\beta_1,\beta_2,\beta_3)
+\]
 \chapter{Classical Rodriquez Parameters}
+Classical Rodriguez Parameters, or CRPs for short, are a 3 coordinate parameterization. These will come in handy when we discuss the QUEST method. In the context of the other parameterizations, they're honestly not all that complex.
+\section{EPs to CRPs}
+In the context of EPs, CRPs are described as:
+\[
+q_i = \dfrac{\beta_i}{\beta_0}
+\]
+for \(i=1,2,3\)
+\subsection{A Singularity?}
+With your keen eye, you might have noticed a weird behavior if your angle hits 180. And it's true, \textbf{CRPs hit a singularity when they're pointed at 180 degrees}, like so:
+\[
+q_i = \dfrac{\beta_i}{\cos(180^{\circ}/2)} = \dfrac{\beta_i}{0}
+\]
+\section{CRPs to EPs}
+\[
+\beta_0 = \dfrac{1}{\sqrt{1+q^Tq}}
+\]
+\[
+\beta_i = \dfrac{q_i}{\sqrt{1+q^Tq}}
+\]
+for \(i=1,2,3\)
 \chapter{Attitude Determination?}
 Now that you got a good chunk of the preliminaries out of the way, let's get into how it's applied. The whole idea of \emph{Attitude Determination} is broken up into 2 types of problems:
 \begin{enumerate}
@@ -529,21 +568,15 @@ g(\bar{\beta}) = \bar{\beta}^T[K]\bar{\beta} = \bar{\beta}^T\lambda\bar{\beta} =
 
 To summarize, Davenport's Q boils down to the following:
 \begin{enumerate}
-\item{Compute the [K] matrix}
-\item{Find the eigenvalues and eigenvectors of said [K] matrix}
-\item{Choose the largest eigenvalue + corresponding eigenvector}
-\item{This eigenvector is your set of EPs}
+\item{Compute the [K] matrix.}
+\item{Find the eigenvalues and eigenvectors of said [K] matrix.}
+\item{Choose the largest eigenvalue + corresponding eigenvector.}
+\item{This eigenvector is your set of EPs.}
 \end{enumerate}
-%[BN] in terms of quaternions is:
-%\[
-%[BN] = (\beta_0^2 - \epsilon^T\epsilon)[I_{3x3}]+2\epsilon\epsilon^T-2\beta_0[\tilde{\epsilon}]
-%\]
-%\[
-%\epsilon = (\beta_1,\beta_2,\beta_3)
-%\]
+
 
 \chapter{QUEST}
-Davenport's Q is lovely, but computationally, solving that eigenvalue problem is computationally expensive. This makes it fairly unpopular for realtime applications. In order to gain a bit of speed, how about we bypass that eigenvalue problem completely? Although a little less straightforward, the extra speed offered by QUEST (which stands for QUaternion ESTimation) is very nice.
+Davenport's Q is lovely, but computationally, solving that eigenvalue problem is computationally expensive. This makes it fairly unpopular for realtime applications. In order to gain a bit of speed, how about we cleverly tackle that eigenvalue problem a different way? Although a little less straightforward, the extra speed offered by QUEST (which stands for QUaternion ESTimation) is much appreciated. Like the Davenport's Q chapter, quite math heavy.
 \section{A Nice Approximation}
 Recall from the previous chapter, the loss ($J$) and gain ($g$) functions:
 \[
@@ -566,12 +599,13 @@ Let's isolate the optimal eigenvalue:
 \]
 Solving the problem like this seems like a whole bunch of work that we don't want to do, so let's just assume J is small. Like really, really small. In fact, so small that we can treat it like 0. Thus, the equation turns into:
 \[
+\mathbf{
 \lambda_{opt} \approx \sum^n_{k=1} w_k
-\]
-We now have a really good guess at our actual optimal eigenvalue. Unless your sensors are throwing laughably bad measurements that is.
+}\]
+We now have a \emph{really} good guess at the real optimal eigenvalue. (Well, unless your sensors are throwing laughably bad measurements that is)
 
 \section{Refining the Guess}
-We got a great guess, but it's still just a guess. In order to continue, we need to refine it and numerically find the maximum eigenvalue. We know that eigenvalues must satisfy the characteristic equation:
+We got a great guess, but it's still just a guess. In order to continue, we need to refine it and numerically find the actual maximum eigenvalue. We know that eigenvalues must satisfy the characteristic equation:
 \[
 f(s) = det([K]-s[I_{3x3}]) = 0
 \]
@@ -588,7 +622,7 @@ det(
 \[
 \lambda^2+3\lambda+2=0
 \]
-Since we're trying to find the root of the characteristic equation, we can use Newton-Raphson iteration. Newton-Raphson is just a numerical method to find the roots of polynomials. Don't let the "numerical" scare you, it's actually pretty simple. We'll use the $f(s)$  (the characteristic equation) we defined above in the Newton-Raphson:
+Since we're trying to find the root of the characteristic equation, we can use Newton-Raphson iteration. Newton-Raphson is just a numerical method to find the roots of polynomials. Don't let the "numerical" scare you, it's actually pretty simple. We'll use the $f(s)$  (the characteristic equation) we defined above and its derivative in the Newton-Raphson:
 \[
 \lambda_0 = \sum^n_{k=1} w_k
 \]
@@ -601,7 +635,7 @@ Repeating this process a couple of times,
 \]
 Repeating this moves you closer and closer to the actual maximum eigenvalue. We're allowed to do this since our $\lambda_{opt}$ guess already places us close to the actual $\lambda_{max}$.
 
-\section{Searching for $\beta$}
+\section{Searching for \(\bar{q}\)}
 QUEST is actually a bit of a misnomer, since we'll actually be first receiving the result in CRPs. A quick refresher on CRPs:
 \[
 q = \hat{e} \tan{\dfrac{\phi}{2}} = 
@@ -612,7 +646,7 @@ q = \hat{e} \tan{\dfrac{\phi}{2}} =
 \beta_3
 \end{bmatrix}
 \]
-And we can describe a convenient link between the EPs and CRPs, like so:
+And let's describe a convenient notational link between the EPs and CRPs, like so:
 \[
 \dfrac{\bar{\beta}}{\beta_0} = 
 \begin{bmatrix}
@@ -623,7 +657,7 @@ First, our original eigenvector problem looks like:
 \[
 [K]\bar{\beta} = \lambda_{opt}\bar{\beta}
 \]
-Let's get this whole formula into CRPs and expand the K matrix.
+Let's get this whole formula into CRPs and expand the K matrix:
 \[
 [K]\dfrac{\bar{\beta}}{\beta_0} = \lambda_{opt}\dfrac{\bar{\beta}}{\beta_0}
 \]
@@ -639,13 +673,15 @@ Z&&S-\sigma[I_{3x3}]
 1\\\bar{q} 
 \end{bmatrix}
 \]
-Doing the whole matrix multiplication and trimming out the unnecessary top row, we'll get:
+If we do the whole matrix multiplication and just trim out the unnecessary top row, we'll get:
 \[
 [Z] + ([S] - \sigma [I_{3x3}])\bar{q} = \lambda_{opt}\bar{q}
 \]
 Superb, we're getting close now. We can now isolate $\bar{q}$, thus:
 \[
+\mathbf{
 \bar{q} = ((\lambda_{opt}+\sigma)[I_{3x3}] - [S])^{-1}[Z]
+}
 \]
 Well, you came for EPs after all, so you'll need to do the following to convert back to EPs.
 \[
@@ -655,6 +691,16 @@ Well, you came for EPs after all, so you'll need to do the following to convert 
 \end{bmatrix}
 \]
 \section{Aren't You Forgetting Something?}
+If alarm bells are going off in your head since CRPs go singular at 180 degrees, then you are absolutely right. The way this is resolved is by taking an \emph{alternate body frame}, determining your attitude from that, and adjusting afterwards. Having these 2 body frames will ensure that both will not bump into that singularity at the same time. 
+
+This technique is valid since defining a body frame is completely arbitrary. After all, what's stopping you from defining your $b_1$ vector towards say, the left wing of your spaceship? Nothing.
+\section{In a Nutshell}
+\begin{enumerate}
+\item{Estimate \(\lambda_{opt}\) by summing the weight values.}
+\item{Refine your \(\lambda_{opt}\) guess by doing Newton-Raphson with the characteristic equation.}
+\item{Acquire your optimal attitude in CRPs. Convert to quaternions.}
+\item{Handle the singularity, if it appears.} 
+\end{enumerate}
 \chapter{Answer Key}
 \section{Chapter 1 DCM}
 \begin{enumerate}
