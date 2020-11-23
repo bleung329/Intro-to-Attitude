@@ -321,7 +321,7 @@ As you've probably heard, Euler angles are prone to throwing singularities when 
 
 \chapter{Principal Rotation Vectors}
 
-Euler Angles are great, but you \emph{really} don't wanna use them for spacecraft or other body frames that can tumble head over heels. Let's try something new, something called a \emph{Principal Rotation Vector}. First, let's internalize \emph{Euler's Principal Rotation Theorem}. it states:
+Euler Angles are great and easy to visualize, but you really don't wanna use them for body frames that can tumble head over heels. Let's try something new, something called a Principal Rotation Vector. First, let's internalize \emph{Euler's Principal Rotation Theorem}. it states:
 
 \begin{center}
 \textbf{THEOREM: A rigid body can be brought from a start to an end orientation by a single rigid rotation ($\phi$ rad/deg) around some principal axis ($\hat{e}$). This principal axis is fixed in both the start and end orientation.}
@@ -382,7 +382,7 @@ Quaternions form a number system that extends the complex number system. It was 
 \[
 a + bi + cj + dk
 \]
-Where a,b,c,d are real coefficients and i,j,k are complex. I'm not gonna go too deep into this since I'm certainly not qualified enough to say more.
+Where a,b,c,d are real coefficients and i,j,k are hypercomplex. I'm not gonna go deeper into this since I'm certainly not qualified enough to say more.
 
 \section{Defining EPs from PRVs}
 As you probably know, quaternions involve 4 terms. We'll refer to them as:
@@ -427,7 +427,7 @@ q_i = \dfrac{\beta_i}{\beta_0}
 \]
 for \(i=1,2,3\)
 \subsection{A Singularity?}
-With your keen eye, you might have noticed a weird behavior if your angle hits 180. And it's true, \textbf{CRPs hit a singularity when they're pointed at 180 degrees}, like so:
+Your keen eye might have noticed a zero appearing if your angle hits 180. And it's true, \textbf{CRPs hit a singularity when they're pointed at 180 degrees}, like so:
 \[
 q_i = \dfrac{\beta_i}{\cos(180^{\circ}/2)} = \dfrac{\beta_i}{0}
 \]
@@ -439,6 +439,15 @@ q_i = \dfrac{\beta_i}{\cos(180^{\circ}/2)} = \dfrac{\beta_i}{0}
 \beta_i = \dfrac{q_i}{\sqrt{1+q^Tq}}
 \]
 for \(i=1,2,3\)
+\section{PRVs to CRPS}
+The relation between CRPs and PRVs is very simple:
+\[
+\bar{q} = \tan{(\dfrac{\phi}{2})}\hat{e}
+\]
+For small angles, we can even approximate it to where it's even simpler:
+\[
+\bar{q} \approx \dfrac{\phi}{2}\hat{e}
+\]
 \chapter{Attitude Determination?}
 Now that you got a good chunk of the preliminaries out of the way, let's get into how it's applied. The whole idea of \emph{Attitude Determination} is broken up into 2 types of problems:
 \begin{enumerate}
@@ -578,7 +587,7 @@ To summarize, Davenport's Q boils down to the following:
 \chapter{QUEST}
 Davenport's Q is lovely, but computationally, solving that eigenvalue problem is computationally expensive. This makes it fairly unpopular for realtime applications. In order to gain a bit of speed, how about we cleverly tackle that eigenvalue problem a different way? Although a little less straightforward, the extra speed offered by QUEST (which stands for QUaternion ESTimation) is much appreciated. Like the Davenport's Q chapter, quite math heavy.
 \section{A Nice Approximation}
-Recall from the previous chapter, the loss ($J$) and gain ($g$) functions:
+Recall from the previous chapter the loss ($J$) and gain ($g$) functions:
 \[
 J([\tilde{B}N]) = \sum^n_{k=1} w_k (1- \vk{B}^T[\tilde{B}N]\vk{N})
 \]
@@ -619,6 +628,7 @@ det(
 \lambda&&0\\0&&\lambda
 \end{bmatrix}) = 0
 \]
+Which gives a characteristic equation of
 \[
 \lambda^2+3\lambda+2=0
 \]
@@ -629,7 +639,7 @@ Since we're trying to find the root of the characteristic equation, we can use N
 \[
 \lambda_1 = \lambda_0 - \dfrac{f(\lambda_0)}{f'(\lambda_0)}
 \]
-Repeating this process a couple of times,
+Repeating this process a couple of times and checking whether $\lambda$ fulfills the characteristic equation,
 \[
 \lambda_{max} = \lambda_i = \lambda_{i-1} - \dfrac{f(\lambda_{i-1})}{f'(\lambda_{i-1})}
 \]
@@ -691,15 +701,15 @@ Well, you came for EPs after all, so you'll need to do the following to convert 
 \end{bmatrix}
 \]
 \section{Aren't You Forgetting Something?}
-If alarm bells are going off in your head since CRPs go singular at 180 degrees, then you are absolutely right. The way this is resolved is by taking an \emph{alternate body frame}, determining your attitude from that, and adjusting afterwards. Having these 2 body frames will ensure that both will not bump into that singularity at the same time. 
+If alarm bells are going off in your head since CRPs go singular at 180 degrees, then you are absolutely right. The way this is resolved is by considering an \emph{alternate body frame}, determining your attitude from that, and adjusting afterwards to your true body frame. Having these 2 body frames will ensure that both will not bump into that singularity at the same time. 
 
-This technique is valid since defining a body frame is completely arbitrary. After all, what's stopping you from defining your $b_1$ vector towards say, the left wing of your spaceship? Nothing.
+This technique is valid since defining a body frame is completely arbitrary. After all, what's stopping you from defining your $b_1$ vector towards say, the left wing of your spaceship?\footnote{The answer is nothing, if you're actually wondering.}
 \section{In a Nutshell}
 \begin{enumerate}
 \item{Estimate \(\lambda_{opt}\) by summing the weight values.}
 \item{Refine your \(\lambda_{opt}\) guess by doing Newton-Raphson with the characteristic equation.}
 \item{Acquire your optimal attitude in CRPs. Convert to quaternions.}
-\item{Handle the singularity, if it appears.} 
+\item{If need arise, handle the singularity} 
 \end{enumerate}
 \chapter{Answer Key}
 \section{Chapter 1 DCM}

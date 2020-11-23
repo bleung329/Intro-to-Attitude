@@ -35,6 +35,7 @@
 \contentsline {section}{\numberline {7.1}EPs to CRPs}{25}{}%
 \contentsline {subsection}{\numberline {7.1.1}A Singularity?}{25}{}%
 \contentsline {section}{\numberline {7.2}CRPs to EPs}{26}{}%
+\contentsline {section}{\numberline {7.3}PRVs to CRPS}{26}{}%
 \contentsline {chapter}{\numberline {8}Attitude Determination?}{27}{}%
 \contentsline {chapter}{\numberline {9}TRIAD Method}{28}{}%
 \contentsline {chapter}{\numberline {10}What is Wahba's Problem?}{29}{}%
@@ -51,6 +52,6 @@
 \contentsline {section}{\numberline {12.2}Refining the Guess}{36}{}%
 \contentsline {section}{\numberline {12.3}Searching for \(\bar {q}\)}{37}{}%
 \contentsline {section}{\numberline {12.4}Aren't You Forgetting Something?}{38}{}%
-\contentsline {section}{\numberline {12.5}In a Nutshell}{38}{}%
+\contentsline {section}{\numberline {12.5}In a Nutshell}{39}{}%
 \contentsline {chapter}{\numberline {13}Answer Key}{40}{}%
 \contentsline {section}{\numberline {13.1}Chapter 1 DCM}{40}{}%
