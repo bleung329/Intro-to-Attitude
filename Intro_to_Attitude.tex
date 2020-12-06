@@ -4,6 +4,7 @@
 \newcommand{\bv}[1]{\hat{b_{#1}}}
 \newcommand{\nv}[1]{\hat{n_{#1}}}
 \newcommand{\vk}[1]{\prescript{#1}{}{\hat{v_k}}}
+\newcommand{\ps}[2]{\prescript{#2}{}{\hat{#1}}}
 
 %PACKAGES
 %Graphics
@@ -87,7 +88,7 @@ When you get close to a singularity in your attitude description, the kinematic 
 \item \textbf{There exists redundant sets of 4 or more coordinates that are universally valid.}
 
 \end{enumerate}
-\chapter{DCM}
+\chapter{DCMs}
 
 It doesn't stand for dichloromethane. And please, don't call it a DCM matrix.
 
@@ -316,7 +317,7 @@ To get the full DCM of a $\alpha\beta\gamma$ Euler set:
 \section{DCMs to Euler Angles}
 Converting from DCMs to Euler angles is a more involved process, due to the large variety of sets.
 \section{Singularities}
-As you've probably heard, Euler angles are prone to throwing singularities when rotated in certain ways.
+As you've probably heard, Euler angles are prone to throwing singularities when rotated in certain ways. 
 \section{Test Your Knowledge}
 
 \chapter{Principal Rotation Vectors}
@@ -373,7 +374,7 @@ C_{23}-C_{32}\\C_{31}-C_{13}\\C_{12}-C_{21}\\
 \]
 \chapter{Quaternions/EPs}
 
-Googling ``quaternion math" will probably scare you, so let's leave all that fancy stuff for the math majors. Taken in the context of PRVs however, they're actually pretty straightforward.
+Quaternions are usually the first thing people think of when someone says "non-singular attitude description". You might've been frightened by googling ``quaternion math", so let's leave all that stuff for the math majors. Taken in the context of PRVs, they're actually pretty straightforward.
 
 Just to get this out of the way, you'll probably hear the term ``Euler Parameters" being used (EPs for short) and you might wonder what the difference is. Quaternions are the mathematical construct and Euler Parameters are the \emph{coefficients} of the quaternion.\\
  
@@ -418,6 +419,38 @@ If you want a cleaner looking formula,
 \[
 \epsilon = (\beta_1,\beta_2,\beta_3)
 \]
+\section{DCMS to EP}
+Moving from DCMs to EPs is a little more complex. In order to avoid bumping into a division by zero, people use \emph{Sheppard's Method}. Here's how it goes:
+\begin{enumerate}
+\item{Find the largest value out of the following:\\
+\[
+\beta_0^2 = \dfrac{1}{4}(1+trace([C]))
+\]
+\[
+\beta_1^2 = \dfrac{1}{4}(1+2C_{11}-trace([C]))
+\]
+\[
+\beta_2^2 = \dfrac{1}{4}(1+2C_{22}-trace([C]))
+\]
+\[
+\beta_3^2 = \dfrac{1}{4}(1+2C_{33}-trace([C]))
+\]}
+\item{Find the positive square root of this largest value, and find the rest of the values using the following set of equations:\\
+\[\beta_0\beta_1=(C_{23}-C_{32})/4,\;\beta_1\beta_2=(C_{12}+C_{21})/4\]
+\[\beta_0\beta_2=(C_{31}-C_{13})/4,\;\beta_3\beta_1=(C_{31}+C_{13})/4\]
+\[\beta_0\beta_3=(C_{12}-C_{21})/4,\;\beta_2\beta_3=(C_{23}+C_{32})/4\]
+}
+\end{enumerate}
+
+\subsection{Elaborate?}
+This might appear vague, so lets break it down a bit in an example. Let's say that the largest value of the bunch is 
+\(\beta_2^2\). The positive square root of this value is just: \(\beta_2\). Now that we have this value, we can find the rest of the $\beta$s by dividing all the step 2 products that include $\beta_2$. For example, to find $\beta_0$:
+\[
+\beta_0=\dfrac{\beta_0\beta_2}{\beta_2}\
+\]
+And so on so forth.
+
+\subsection{Why Don't We Just Square Root Everything?}
 \chapter{Classical Rodriquez Parameters}
 Classical Rodriguez Parameters, or CRPs for short, are a 3 coordinate parameterization. These will come in handy when we discuss the QUEST method. In the context of the other parameterizations, they're honestly not all that complex.
 \section{EPs to CRPs}
@@ -449,7 +482,7 @@ For small angles, we can even approximate it to where it's even simpler:
 \bar{q} \approx \dfrac{\phi}{2}\hat{e}
 \]
 \chapter{Attitude Determination?}
-Now that you got a good chunk of the preliminaries out of the way, let's get into how it's applied. The whole idea of \emph{Attitude Determination} is broken up into 2 types of problems:
+Now that you got a good chunk of the preliminaries out of the way, let's get into how it's applied. The whole topic of \emph{Attitude Determination} is broken up into 2 types of problems:
 \begin{enumerate}
 \item{
 \textbf{Static Attitude Determination:} You take all of your measurements at the same time, and try to solve for the optimal geometry of the measurements, figuring out your attitude at that instant of time.
@@ -458,9 +491,43 @@ Now that you got a good chunk of the preliminaries out of the way, let's get int
 }
 \end{enumerate}
 
+\section{Types of Sensors}
 
 \chapter{TRIAD Method}
-Published in 1964, TRIAD is one of the oldest algorithms out there. Despite its age, it is still a viable method for simpler satellites.
+Published in 1964, TRIAD (or specifically, TRIAD-1) is one of the oldest algorithms out there and, by far, the simplest. Despite its age, it is still a viable method for simpler satellites. There exists other  variations of TRIAD, but I won't be covering those.
+
+\section{How it Works}
+\begin{center}
+\includegraphics[width=8cm]{triad}
+\end{center}
+We want a DCM that gets us from inertial frame to a body frame, but jumping straight from inertial to body seems pretty hard. Let's use an intermediate frame or \emph{triad frame} to hop from 
+\begin{center}Inertial $\rightarrow$ Triad $\rightarrow$ Body\end{center}
+\subsection{How Do We Assemble the Triad Frame?}
+You'll need to assemble the triad frame using the measurement vectors in both the body and inertial context. Assuming we have a sun sensor that gives us a measurement vector $\hat{s}$ and a magnetometer that gives us a vector $\hat{m}$:
+\begin{center}
+For body:
+\[
+\ps{t}{B}_1=\ps{s}{B},\;\ps{t}{B}_2=\dfrac{\ps{s}{B}\times\ps{m}{B}}{|\ps{s}{B}\times\ps{m}{B}|},\;\ps{t}{B}_3 = \ps{t}{B}_1\times\ps{t}{B}_2
+\]
+Likewise, for inertial:
+\[
+\ps{t}{N}_1=\ps{s}{N},\;\ps{t}{N}_2=\dfrac{\ps{s}{N}\times\ps{m}{N}}{|\ps{s}{N}\times\ps{m}{N}|},\;\ps{t}{N}_3 = \ps{t}{N}_1\times\ps{t}{N}_2
+\]
+We can now say:
+\[
+[BT]=[\ps{t}{B}_1 \ps{t}{B}_2 \ps{t}{B}_3]
+\]
+\[
+[NT]=[\ps{t}{N}_1 \ps{t}{N}_2 \ps{t}{N}_3]
+\]
+Recalling DCM addition and subtraction, we can now easily conclude:
+\[
+[BN] = [BT][NT]^T
+\]
+Neat and simple.
+\end{center}
+\section{The Catch}
+Though lovely and simple, TRIAD does have its rough edges.
 \chapter{What is Wahba's Problem?}
 \section{Definitions and Things}
 TRIAD is great and all, but what if we want to make use of all the sensors we have on our satellite? After all, your sponsor would probably be pissed if they paid for a GPS receiver and 4 star trackers but you're only using 1 star tracker and a sun sensor.
@@ -585,7 +652,7 @@ To summarize, Davenport's Q boils down to the following:
 
 
 \chapter{QUEST}
-Davenport's Q is lovely, but computationally, solving that eigenvalue problem is computationally expensive. This makes it fairly unpopular for realtime applications. In order to gain a bit of speed, how about we cleverly tackle that eigenvalue problem a different way? Although a little less straightforward, the extra speed offered by QUEST (which stands for QUaternion ESTimation) is much appreciated. Like the Davenport's Q chapter, quite math heavy.
+Davenport's Q is lovely, but solving that eigenvalue problem is computationally expensive. This makes it fairly unpopular for realtime applications. In order to gain a bit of speed, how about we cleverly solve that eigenvalue problem a different way? Although a little less straightforward, the extra speed offered by the QUEST method (which stands for QUaternion ESTimation) is much appreciated. Like the Davenport's Q chapter, quite math heavy.
 \section{A Nice Approximation}
 Recall from the previous chapter the loss ($J$) and gain ($g$) functions:
 \[
@@ -709,7 +776,7 @@ This technique is valid since defining a body frame is completely arbitrary. Aft
 \item{Estimate \(\lambda_{opt}\) by summing the weight values.}
 \item{Refine your \(\lambda_{opt}\) guess by doing Newton-Raphson with the characteristic equation.}
 \item{Acquire your optimal attitude in CRPs. Convert to quaternions.}
-\item{If need arise, handle the singularity} 
+\item{If need arise, handle the singularity.} 
 \end{enumerate}
 \chapter{Answer Key}
 \section{Chapter 1 DCM}

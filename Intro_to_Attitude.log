@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.27)  23 NOV 2020 13:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.27)  5 DEC 2020 23:14
 entering extended mode
 **./Intro_to_Attitude.tex
 (Intro_to_Attitude.tex
@@ -164,20 +164,20 @@ File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 ) (Intro_to_Attitude.aux)
 \openout1 = `Intro_to_Attitude.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 
 (C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -220,37 +220,37 @@ Chapter 2.
 <./images//shuttle_body_frame.jpg, id=24, 197.73875pt x 256.96pt>
 File: ./images//shuttle_body_frame.jpg Graphic file (type jpg)
 <use ./images//shuttle_body_frame.jpg>
-Package pdftex.def Info: ./images//shuttle_body_frame.jpg  used on input line 5
-9.
+Package pdftex.def Info: ./images//shuttle_body_frame.jpg  used on input line 6
+0.
 (pdftex.def)             Requested size: 113.81102pt x 147.89592pt.
 <./images//ecef.png, id=25, 502.87875pt x 502.87875pt>
 File: ./images//ecef.png Graphic file (type png)
 <use ./images//ecef.png>
-Package pdftex.def Info: ./images//ecef.png  used on input line 59.
+Package pdftex.def Info: ./images//ecef.png  used on input line 60.
 (pdftex.def)             Requested size: 147.94893pt x 147.95424pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--66
+Underfull \hbox (badness 10000) in paragraph at lines 63--67
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--66
+Underfull \hbox (badness 10000) in paragraph at lines 63--67
 
  []
 
 [5 <./images//shuttle_body_frame.jpg> <./images//ecef.png>]
-Overfull \hbox (11.67076pt too wide) in paragraph at lines 70--70
+Overfull \hbox (11.67076pt too wide) in paragraph at lines 71--71
 []\OT1/cmr/bx/n/20.74 Why Worry About At-ti-tude Any-ways? 
  []
 
 
-Overfull \hbox (37.86354pt too wide) in paragraph at lines 71--72
+Overfull \hbox (37.86354pt too wide) in paragraph at lines 72--73
 \OT1/cmr/m/n/14.4 have to be headed in the right di-rec-tion?". De-pend-ing on 
 the project/mission,
  []
 
 
-Overfull \hbox (2.33075pt too wide) in paragraph at lines 83--84
+Overfull \hbox (2.33075pt too wide) in paragraph at lines 84--85
 []\OT1/cmr/bx/n/14.4 At/near the sin-gu-lar-i-ties, the kine-matic dif-fer-en-t
 ial equa-
  []
@@ -263,26 +263,26 @@ Chapter 3.
 <./images//dcmalpha.jpg, id=39, 942.4008pt x 895.4253pt>
 File: ./images//dcmalpha.jpg Graphic file (type jpg)
 <use ./images//dcmalpha.jpg>
-Package pdftex.def Info: ./images//dcmalpha.jpg  used on input line 125.
+Package pdftex.def Info: ./images//dcmalpha.jpg  used on input line 126.
 (pdftex.def)             Requested size: 199.16928pt x 189.23355pt.
  [9 <./images//dcmalpha.jpg>] [10]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-60.
+61.
 
 (C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 160.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 161.
 
 [11]
-Overfull \hbox (13.35614pt too wide) in paragraph at lines 198--199
+Overfull \hbox (13.35614pt too wide) in paragraph at lines 199--200
 []\OT1/cmr/m/n/14.4 Using vet-ri-ces with or-thog-o-nal vec-tors is con-ven-tio
 n be-cause they're
  []
 
 [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 221--247
+Underfull \hbox (badness 10000) in paragraph at lines 222--248
 
  []
 
@@ -291,10 +291,10 @@ Chapter 4.
 <./images//euler_proper.jpg, id=63, 620.3175pt x 231.86626pt>
 File: ./images//euler_proper.jpg Graphic file (type jpg)
 <use ./images//euler_proper.jpg>
-Package pdftex.def Info: ./images//euler_proper.jpg  used on input line 262.
+Package pdftex.def Info: ./images//euler_proper.jpg  used on input line 263.
 (pdftex.def)             Requested size: 455.24408pt x 170.16313pt.
 
-Overfull \hbox (25.24408pt too wide) in paragraph at lines 262--263
+Overfull \hbox (25.24408pt too wide) in paragraph at lines 263--264
  [] 
  []
 
@@ -305,61 +305,76 @@ Chapter 5.
 <./images//PRV1.png, id=77, 264.99pt x 276.232pt>
 File: ./images//PRV1.png Graphic file (type png)
 <use ./images//PRV1.png>
-Package pdftex.def Info: ./images//PRV1.png  used on input line 331.
+Package pdftex.def Info: ./images//PRV1.png  used on input line 332.
 (pdftex.def)             Requested size: 227.62204pt x 237.2809pt.
 [19
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 336--337
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
 
  []
 
 [20 <./images//PRV1.png>] [21]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--379
+Underfull \hbox (badness 10000) in paragraph at lines 379--380
 
  []
 
 [22
 
-] [23] [24]
+] [23]
+Underfull \hbox (badness 10000) in paragraph at lines 425--426
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 438--439
+
+ []
+
+[24] [25]
 Chapter 7.
-[25
+[26
 
-] [26]
+] [27]
 Chapter 8.
-[27
-
-]
-Chapter 9.
 [28
 
 ]
-Chapter 10.
+Chapter 9.
+<./images//triad.png, id=112, 497.86pt x 395.4775pt>
+File: ./images//triad.png Graphic file (type png)
+<use ./images//triad.png>
+Package pdftex.def Info: ./images//triad.png  used on input line 501.
+(pdftex.def)             Requested size: 227.62204pt x 180.81754pt.
 [29
 
-] [30]
-Chapter 11.
+ <./images//triad.png>] [30]
+Chapter 10.
 [31
 
-] [32] [33] [34]
-Chapter 12.
-[35
+] [32]
+Chapter 11.
+[33
 
-] [36] [37] [38] [39]
+] [34] [35] [36]
+Chapter 12.
+[37
+
+] [38] [39] [40] [41]
 Chapter 13.
-[40
+[42
 
 ] (Intro_to_Attitude.aux) ) 
 Here is how much of TeX's memory you used:
- 2592 strings out of 480236
- 41171 string characters out of 2880557
- 317911 words of memory out of 3000000
- 19138 multiletter control sequences out of 15000+200000
+ 2600 strings out of 480236
+ 41305 string characters out of 2880557
+ 318926 words of memory out of 3000000
+ 19146 multiletter control sequences out of 15000+200000
  548728 words of font info for 75 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,10n,77p,603b,204s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 70i,11n,77p,603b,204s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\brian\AppData\Local\MiKTeX\fonts/pk/ljfou
 r/jknappen/ec/dpi600\tcrm1440.pk><C:/Users/brian/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/brian/AppData/Local/Program
@@ -375,9 +390,9 @@ pe1/public/amsfonts/cm/cmr17.pfb><C:/Users/brian/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/brian/AppData/Local/Programs/
 MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/brian/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Intro_to_Attitude.pdf (41 pages, 918446 bytes).
+Output written on Intro_to_Attitude.pdf (43 pages, 1008295 bytes).
 PDF statistics:
- 195 PDF objects out of 1000 (max. 8388607)
+ 203 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
