@@ -1,207 +1,271 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.27)  5 DEC 2020 23:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.27)  26 DEC 2020 22:17
 entering extended mode
 **./Intro_to_Attitude.tex
 (Intro_to_Attitude.tex
-LaTeX2e <2020-10-01> patch level 1
-L3 programming layer <2020-10-05> xparse <2020-03-03>
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/extsizes\extreport.cls
+LaTeX2e <2018-04-01> patch level 5
+
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\extsizes\extreport
+.cls"
 Document Class: extreport 1996/10/08 v1.0 Non Standard LaTeX document class
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/extsizes\size14.clo
+
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\extsizes\size14.cl
+o"
 File: size14.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
 )
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/base\exscale.sty
-Package: exscale 2018/09/24 v2.1i Standard LaTeX package exscale
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\exscale.sty"
+Package: exscale 2014/09/29 v2.1h Standard LaTeX package exscale
 LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
-\big@size=\dimen138
+\big@size=\dimen102
 )
-\c@part=\count175
-\c@chapter=\count176
-\c@section=\count177
-\c@subsection=\count178
-\c@subsubsection=\count179
-\c@paragraph=\count180
-\c@subparagraph=\count181
-\c@figure=\count182
-\c@table=\count183
-\abovecaptionskip=\skip47
-\belowcaptionskip=\skip48
-\bibindent=\dimen139
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen103
 )
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.
+sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.st
+y"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks15
+\KV@toks@=\toks14
 )
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.
+sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
-fg
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graph
+ics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 105.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdfte
+x.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen140
-\Gin@req@width=\dimen141
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
 )
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mathtools\mathtool
+s.sty"
 Package: mathtools 2020/03/24 v1.24 mathematical typesetting tools
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count184
-\calc@Bcount=\count185
-\calc@Adimen=\dimen142
-\calc@Bdimen=\dimen143
-\calc@Askip=\skip49
-\calc@Bskip=\skip50
+\calc@Acount=\count89
+\calc@Bcount=\count90
+\calc@Adimen=\dimen106
+\calc@Bdimen=\dimen107
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count186
-\calc@Cskip=\skip51
+\calc@Ccount=\count91
+\calc@Cskip=\skip45
 )
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mathtools\mhsetup.
+sty"
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
 )
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2020/09/23 v2.17i AMS math features
-\@mathmargin=\skip52
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.st
+y"
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip46
 
 For additional information on amsmath, use the `?' option.
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.st
+y"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks16
-\ex@=\dimen144
+\@emptytoks=\toks15
+\ex@=\dimen108
 ))
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen145
+\pmbraise@=\dimen109
 )
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count187
-LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count188
-\leftroot@=\count189
-LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count190
-\DOTSCASE@=\count191
-LaTeX Info: Redefining \ldots on input line 496.
-LaTeX Info: Redefining \dots on input line 499.
-LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box47
-\strutbox@=\box48
-\big@size=\dimen146
-LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count192
-\c@MaxMatrixCols=\count193
-\dotsspace@=\muskip16
-\c@parentequation=\count194
-\dspbrk@lvl=\count195
-\tag@help=\toks17
-\row@=\count196
-\column@=\count197
-\maxfields@=\count198
-\andhelp@=\toks18
-\eqnshift@=\dimen147
-\alignsep@=\dimen148
-\tagshift@=\dimen149
-\tagwidth@=\dimen150
-\totwidth@=\dimen151
-\lineht@=\dimen152
-\@envbody=\toks19
-\multlinegap=\skip53
-\multlinetaggap=\skip54
-\mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2923.
-LaTeX Info: Redefining \] on input line 2924.
+\inf@bad=\count92
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count93
+\leftroot@=\count94
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count95
+\DOTSCASE@=\count96
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen110
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count97
+\c@MaxMatrixCols=\count98
+\dotsspace@=\muskip10
+\c@parentequation=\count99
+\dspbrk@lvl=\count100
+\tag@help=\toks16
+\row@=\count101
+\column@=\count102
+\maxfields@=\count103
+\andhelp@=\toks17
+\eqnshift@=\dimen111
+\alignsep@=\dimen112
+\tagshift@=\dimen113
+\tagwidth@=\dimen114
+\totwidth@=\dimen115
+\lineht@=\dimen116
+\@envbody=\toks18
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 )
 LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
-\g_MT_multlinerow_int=\count199
-\l_MT_multwidth_dim=\dimen153
-\origjot=\skip55
-\l_MT_shortvdotswithinadjustabove_dim=\dimen154
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen155
-\l_MT_above_intertext_sep=\dimen156
-\l_MT_below_intertext_sep=\dimen157
-\l_MT_above_shortintertext_sep=\dimen158
-\l_MT_below_shortintertext_sep=\dimen159
-\xmathstrut@box=\box49
-\xmathstrut@dim=\dimen160
-)
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/tools\bm.sty
-Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+\g_MT_multlinerow_int=\count104
+\l_MT_multwidth_dim=\dimen117
+\origjot=\skip49
+\l_MT_shortvdotswithinadjustabove_dim=\dimen118
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen119
+\l_MT_above_intertext_sep=\dimen120
+\l_MT_below_intertext_sep=\dimen121
+\l_MT_above_shortintertext_sep=\dimen122
+\l_MT_below_shortintertext_sep=\dimen123
+\xmathstrut@box=\box28
+\xmathstrut@dim=\dimen124
+) ("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\bm.sty"
+Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup4
 \symboldletters=\mathgroup5
 \symboldsymbols=\mathgroup6
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
-LaTeX Info: Redefining \bm on input line 209.
-)
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
-File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count266
-\l__pdf_internal_box=\box50
+LaTeX Info: Redefining \bm on input line 207.
 ) (Intro_to_Attitude.aux)
 \openout1 = `Intro_to_Attitude.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
-ii
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
+ii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count267
-\scratchdimen=\dimen161
-\scratchbox=\box51
-\nofMPsegments=\count268
-\nofMParguments=\count269
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count270
-\MPscratchDim=\dimen162
-\MPnumerator=\count271
-\makeMPintoPDFobject=\count272
-\everyMPtoPDFconversion=\toks22
+\scratchcounter=\count105
+\scratchdimen=\dimen125
+\scratchbox=\box29
+\nofMPsegments=\count106
+\nofMParguments=\count107
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count108
+\MPscratchDim=\dimen126
+\MPnumerator=\count109
+\makeMPintoPDFobject=\count110
+\everyMPtoPDFconversion=\toks21
 )
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
-ase.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-
+base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infware
+rr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.st
+y"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdefin
+ekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds
+.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions
+.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvsetke
+ys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexcmd
+s.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluate
+x.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftexc
+mds.sty"
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.s
+ty"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
 ) [1
 
-{C:/Users/brian/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+{C:/Users/Brian/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 (Intro_to_Attitude.toc)
 \tf@toc=\write3
 \openout3 = `Intro_to_Attitude.toc'.
@@ -217,16 +281,16 @@ Chapter 2.
 [4
 
 ]
-<./images//shuttle_body_frame.jpg, id=24, 197.73875pt x 256.96pt>
-File: ./images//shuttle_body_frame.jpg Graphic file (type jpg)
-<use ./images//shuttle_body_frame.jpg>
-Package pdftex.def Info: ./images//shuttle_body_frame.jpg  used on input line 6
-0.
+<./images/shuttle_body_frame.jpg, id=22, 197.73875pt x 256.96pt>
+File: ./images/shuttle_body_frame.jpg Graphic file (type jpg)
+<use ./images/shuttle_body_frame.jpg>
+Package pdftex.def Info: ./images/shuttle_body_frame.jpg  used on input line 60
+.
 (pdftex.def)             Requested size: 113.81102pt x 147.89592pt.
-<./images//ecef.png, id=25, 502.87875pt x 502.87875pt>
-File: ./images//ecef.png Graphic file (type png)
-<use ./images//ecef.png>
-Package pdftex.def Info: ./images//ecef.png  used on input line 60.
+<./images/ecef.png, id=23, 502.87875pt x 502.87875pt>
+File: ./images/ecef.png Graphic file (type png)
+<use ./images/ecef.png>
+Package pdftex.def Info: ./images/ecef.png  used on input line 60.
 (pdftex.def)             Requested size: 147.94893pt x 147.95424pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 63--67
@@ -238,7 +302,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--67
 
  []
 
-[5 <./images//shuttle_body_frame.jpg> <./images//ecef.png>]
+[5 <./images/shuttle_body_frame.jpg> <./images/ecef.png>]
 Overfull \hbox (11.67076pt too wide) in paragraph at lines 71--71
 []\OT1/cmr/bx/n/20.74 Why Worry About At-ti-tude Any-ways? 
  []
@@ -260,76 +324,87 @@ Chapter 3.
 [8
 
 ]
-<./images//dcmalpha.jpg, id=39, 942.4008pt x 895.4253pt>
-File: ./images//dcmalpha.jpg Graphic file (type jpg)
-<use ./images//dcmalpha.jpg>
-Package pdftex.def Info: ./images//dcmalpha.jpg  used on input line 126.
+<./images/dcmalpha.jpg, id=38, 942.4008pt x 895.4253pt>
+File: ./images/dcmalpha.jpg Graphic file (type jpg)
+<use ./images/dcmalpha.jpg>
+Package pdftex.def Info: ./images/dcmalpha.jpg  used on input line 128.
 (pdftex.def)             Requested size: 199.16928pt x 189.23355pt.
- [9 <./images//dcmalpha.jpg>] [10]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-61.
+ [9 <./images/dcmalpha.jpg>] [10]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 163.
 
-(C:\Users\brian\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
-File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+
+("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 161.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 163.
 
 [11]
-Overfull \hbox (13.35614pt too wide) in paragraph at lines 199--200
+Overfull \hbox (13.35614pt too wide) in paragraph at lines 201--202
 []\OT1/cmr/m/n/14.4 Using vet-ri-ces with or-thog-o-nal vec-tors is con-ven-tio
 n be-cause they're
  []
 
 [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 222--248
+Underfull \hbox (badness 10000) in paragraph at lines 224--250
 
  []
 
 [14]
 Chapter 4.
-<./images//euler_proper.jpg, id=63, 620.3175pt x 231.86626pt>
-File: ./images//euler_proper.jpg Graphic file (type jpg)
-<use ./images//euler_proper.jpg>
-Package pdftex.def Info: ./images//euler_proper.jpg  used on input line 263.
+<./images/euler_proper.jpg, id=62, 620.3175pt x 231.86626pt>
+File: ./images/euler_proper.jpg Graphic file (type jpg)
+<use ./images/euler_proper.jpg>
+Package pdftex.def Info: ./images/euler_proper.jpg  used on input line 265.
 (pdftex.def)             Requested size: 455.24408pt x 170.16313pt.
 
-Overfull \hbox (25.24408pt too wide) in paragraph at lines 263--264
+Overfull \hbox (25.24408pt too wide) in paragraph at lines 265--266
  [] 
  []
 
 [15
 
- <./images//euler_proper.jpg>] [16] [17] [18]
+ <./images/euler_proper.jpg>] [16] [17] [18]
 Chapter 5.
-<./images//PRV1.png, id=77, 264.99pt x 276.232pt>
-File: ./images//PRV1.png Graphic file (type png)
-<use ./images//PRV1.png>
-Package pdftex.def Info: ./images//PRV1.png  used on input line 332.
+<./images/PRV1.png, id=76, 264.99pt x 276.232pt>
+File: ./images/PRV1.png Graphic file (type png)
+<use ./images/PRV1.png>
+Package pdftex.def Info: ./images/PRV1.png  used on input line 334.
 (pdftex.def)             Requested size: 227.62204pt x 237.2809pt.
 [19
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 337--338
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
 
  []
 
-[20 <./images//PRV1.png>] [21]
+[20 <./images/PRV1.png>] [21]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--380
+Overfull \hbox (1.39734pt too wide) in paragraph at lines 379--380
+\OT1/cmr/m/n/14.4 one says ``non-singular at-ti-tude de-scrip-tion". If you've 
+googled ``quater-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--382
 
  []
 
 [22
 
 ] [23]
-Underfull \hbox (badness 10000) in paragraph at lines 425--426
+Underfull \hbox (badness 10000) in paragraph at lines 430--431
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 438--439
+Underfull \hbox (badness 10000) in paragraph at lines 443--444
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 451--453
 
  []
 
@@ -341,58 +416,58 @@ Chapter 7.
 Chapter 8.
 [28
 
-]
+] [29] [30]
 Chapter 9.
-<./images//triad.png, id=112, 497.86pt x 395.4775pt>
-File: ./images//triad.png Graphic file (type png)
-<use ./images//triad.png>
-Package pdftex.def Info: ./images//triad.png  used on input line 501.
+<./images/triad.png, id=119, 497.86pt x 395.4775pt>
+File: ./images/triad.png Graphic file (type png)
+<use ./images/triad.png>
+Package pdftex.def Info: ./images/triad.png  used on input line 513.
 (pdftex.def)             Requested size: 227.62204pt x 180.81754pt.
-[29
-
- <./images//triad.png>] [30]
-Chapter 10.
 [31
 
-] [32]
+ <./images/triad.png>] [32] [33]
+Chapter 10.
+[34
+
+] [35]
 Chapter 11.
-[33
+[36
 
-] [34] [35] [36]
+] [37] [38] [39]
 Chapter 12.
-[37
+[40
 
-] [38] [39] [40] [41]
+] [41] [42] [43] [44]
 Chapter 13.
-[42
+[45
 
 ] (Intro_to_Attitude.aux) ) 
 Here is how much of TeX's memory you used:
- 2600 strings out of 480236
- 41305 string characters out of 2880557
- 318926 words of memory out of 3000000
- 19146 multiletter control sequences out of 15000+200000
- 548728 words of font info for 75 fonts, out of 3000000 for 9000
+ 2804 strings out of 492972
+ 43575 string characters out of 3126622
+ 113265 words of memory out of 3000000
+ 6634 multiletter control sequences out of 15000+200000
+ 16939 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,11n,77p,603b,204s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\brian\AppData\Local\MiKTeX\fonts/pk/ljfou
-r/jknappen/ec/dpi600\tcrm1440.pk><C:/Users/brian/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/brian/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/brian/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/brian/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/
-brian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-C:/Users/brian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmm
-ib10.pfb><C:/Users/brian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb><C:/Users/brian/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb><C:/Users/brian/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmr17.pfb><C:/Users/brian/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/brian/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/brian/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Intro_to_Attitude.pdf (43 pages, 1008295 bytes).
+ 41i,11n,25p,592b,196s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Brian/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Brian/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Brian/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Bri
+an/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+<C:/Users/Brian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmi12.pfb><C:/Users/Brian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmmib10.pfb><C:/Users/Brian/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Brian/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Brian/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Brian/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/U
+sers/Brian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y10.pfb><C:/Users/Brian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmti12.pfb>
+Output written on Intro_to_Attitude.pdf (46 pages, 1012653 bytes).
 PDF statistics:
- 203 PDF objects out of 1000 (max. 8388607)
+ 207 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

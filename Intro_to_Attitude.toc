@@ -1,64 +1,69 @@
-\contentsline {chapter}{\numberline {1}Preface}{2}{}%
-\contentsline {section}{\numberline {1.1}Prerequisites}{2}{}%
-\contentsline {section}{\numberline {1.2}Message to the Reader}{2}{}%
-\contentsline {section}{\numberline {1.3}Acknowledgement}{2}{}%
-\contentsline {section}{\numberline {1.4}What This Text Offers}{3}{}%
-\contentsline {chapter}{\numberline {2}What is Attitude Anyways?}{4}{}%
-\contentsline {section}{\numberline {2.1}Definition}{4}{}%
-\contentsline {section}{\numberline {2.2}Frames?}{4}{}%
-\contentsline {section}{\numberline {2.3}It's All Relative}{5}{}%
-\contentsline {section}{\numberline {2.4}Why Worry About Attitude Anyways?}{6}{}%
-\contentsline {section}{\numberline {2.5}4 Basic Truths}{6}{}%
-\contentsline {chapter}{\numberline {3}DCMs}{8}{}%
-\contentsline {section}{\numberline {3.1}Funky Formalisms}{8}{}%
-\contentsline {section}{\numberline {3.2}The Math: A Tale of 2 Frames}{9}{}%
-\contentsline {subsection}{\numberline {3.2.1}Well, Whats The Point?}{10}{}%
-\contentsline {section}{\numberline {3.3}Adding and Subtracting DCMs}{11}{}%
-\contentsline {section}{\numberline {3.4}Properties}{12}{}%
-\contentsline {subsection}{\numberline {3.4.1}Wait a Minute...}{13}{}%
-\contentsline {section}{\numberline {3.5}Test Your Knowledge}{14}{}%
-\contentsline {chapter}{\numberline {4}Euler Angles}{15}{}%
-\contentsline {section}{\numberline {4.1}Types of Euler Angles}{16}{}%
-\contentsline {section}{\numberline {4.2}Euler Angles to DCMs}{17}{}%
-\contentsline {section}{\numberline {4.3}DCMs to Euler Angles}{17}{}%
-\contentsline {section}{\numberline {4.4}Singularities}{18}{}%
-\contentsline {section}{\numberline {4.5}Test Your Knowledge}{18}{}%
-\contentsline {chapter}{\numberline {5}Principal Rotation Vectors}{19}{}%
-\contentsline {section}{\numberline {5.1}PRVs to DCM}{21}{}%
-\contentsline {section}{\numberline {5.2}DCM to PRVs}{21}{}%
-\contentsline {chapter}{\numberline {6}Quaternions/EPs}{22}{}%
-\contentsline {section}{\numberline {6.1}Well, What is a Quaternion?}{22}{}%
-\contentsline {section}{\numberline {6.2}Defining EPs from PRVs}{23}{}%
-\contentsline {section}{\numberline {6.3}Constraints}{23}{}%
-\contentsline {section}{\numberline {6.4}EPs to DCM}{23}{}%
-\contentsline {section}{\numberline {6.5}DCMS to EP}{24}{}%
-\contentsline {subsection}{\numberline {6.5.1}Elaborate?}{25}{}%
-\contentsline {subsection}{\numberline {6.5.2}Why Don't We Just Square Root Everything?}{25}{}%
-\contentsline {chapter}{\numberline {7}Classical Rodriquez Parameters}{26}{}%
-\contentsline {section}{\numberline {7.1}EPs to CRPs}{26}{}%
-\contentsline {subsection}{\numberline {7.1.1}A Singularity?}{26}{}%
-\contentsline {section}{\numberline {7.2}CRPs to EPs}{27}{}%
-\contentsline {section}{\numberline {7.3}PRVs to CRPS}{27}{}%
-\contentsline {chapter}{\numberline {8}Attitude Determination?}{28}{}%
-\contentsline {section}{\numberline {8.1}Types of Sensors}{28}{}%
-\contentsline {chapter}{\numberline {9}TRIAD Method}{29}{}%
-\contentsline {section}{\numberline {9.1}How it Works}{29}{}%
-\contentsline {subsection}{\numberline {9.1.1}How Do We Assemble the Triad Frame?}{30}{}%
-\contentsline {section}{\numberline {9.2}The Catch}{30}{}%
-\contentsline {chapter}{\numberline {10}What is Wahba's Problem?}{31}{}%
-\contentsline {section}{\numberline {10.1}Definitions and Things}{31}{}%
-\contentsline {subsection}{\numberline {10.1.1}Defining Wahba's Problem}{31}{}%
-\contentsline {subsection}{\numberline {10.1.2}Well, How Do We Solve It?}{32}{}%
-\contentsline {chapter}{\numberline {11}Davenport's Q}{33}{}%
-\contentsline {subsection}{\numberline {11.0.1}Wahba's Problem in Another Light}{33}{}%
-\contentsline {section}{\numberline {11.1}Davenport's Method}{34}{}%
-\contentsline {subsection}{\numberline {11.1.1}Maximizing the Gain?}{35}{}%
-\contentsline {section}{\numberline {11.2}In a Nutshell}{36}{}%
-\contentsline {chapter}{\numberline {12}QUEST}{37}{}%
-\contentsline {section}{\numberline {12.1}A Nice Approximation}{37}{}%
-\contentsline {section}{\numberline {12.2}Refining the Guess}{38}{}%
-\contentsline {section}{\numberline {12.3}Searching for \(\bar {q}\)}{39}{}%
-\contentsline {section}{\numberline {12.4}Aren't You Forgetting Something?}{40}{}%
-\contentsline {section}{\numberline {12.5}In a Nutshell}{41}{}%
-\contentsline {chapter}{\numberline {13}Answer Key}{42}{}%
-\contentsline {section}{\numberline {13.1}Chapter 1 DCM}{42}{}%
+\contentsline {chapter}{\numberline {1}Preface}{2}
+\contentsline {section}{\numberline {1.1}Prerequisites}{2}
+\contentsline {section}{\numberline {1.2}Message to the Reader}{2}
+\contentsline {section}{\numberline {1.3}Acknowledgement}{2}
+\contentsline {section}{\numberline {1.4}What This Text Offers}{3}
+\contentsline {chapter}{\numberline {2}What is Attitude Anyways?}{4}
+\contentsline {section}{\numberline {2.1}Definition}{4}
+\contentsline {section}{\numberline {2.2}Frames?}{4}
+\contentsline {section}{\numberline {2.3}It's All Relative}{5}
+\contentsline {section}{\numberline {2.4}Why Worry About Attitude Anyways?}{6}
+\contentsline {section}{\numberline {2.5}4 Basic Truths}{6}
+\contentsline {chapter}{\numberline {3}DCMs}{8}
+\contentsline {section}{\numberline {3.1}Funky Formalisms}{8}
+\contentsline {section}{\numberline {3.2}The Math: A Tale of 2 Frames}{9}
+\contentsline {subsection}{\numberline {3.2.1}Well, Whats The Point?}{10}
+\contentsline {section}{\numberline {3.3}Adding and Subtracting DCMs}{11}
+\contentsline {section}{\numberline {3.4}Properties}{12}
+\contentsline {subsection}{\numberline {3.4.1}Wait a Minute...}{13}
+\contentsline {section}{\numberline {3.5}Test Your Knowledge}{14}
+\contentsline {chapter}{\numberline {4}Euler Angles}{15}
+\contentsline {section}{\numberline {4.1}Types of Euler Angles}{16}
+\contentsline {section}{\numberline {4.2}Euler Angles to DCMs}{17}
+\contentsline {section}{\numberline {4.3}DCMs to Euler Angles}{17}
+\contentsline {section}{\numberline {4.4}Singularities}{18}
+\contentsline {section}{\numberline {4.5}Test Your Knowledge}{18}
+\contentsline {chapter}{\numberline {5}Principal Rotation Vectors}{19}
+\contentsline {section}{\numberline {5.1}PRVs to DCM}{21}
+\contentsline {section}{\numberline {5.2}DCM to PRVs}{21}
+\contentsline {chapter}{\numberline {6}Quaternions/EPs}{22}
+\contentsline {subsection}{\numberline {6.0.1}A Bit of Definition}{22}
+\contentsline {section}{\numberline {6.1}Well, What is a Quaternion?}{22}
+\contentsline {section}{\numberline {6.2}Defining EPs from PRVs}{23}
+\contentsline {subsection}{\numberline {6.2.1}But... Why?}{23}
+\contentsline {section}{\numberline {6.3}Constraints}{23}
+\contentsline {section}{\numberline {6.4}EPs to DCM}{24}
+\contentsline {section}{\numberline {6.5}DCMS to EP}{24}
+\contentsline {subsection}{\numberline {6.5.1}Elaborate?}{25}
+\contentsline {chapter}{\numberline {7}Classical Rodriquez Parameters}{26}
+\contentsline {section}{\numberline {7.1}EPs to CRPs}{26}
+\contentsline {subsection}{\numberline {7.1.1}A Singularity?}{26}
+\contentsline {section}{\numberline {7.2}CRPs to EPs}{27}
+\contentsline {section}{\numberline {7.3}PRVs to CRPS}{27}
+\contentsline {chapter}{\numberline {8}Attitude Determination?}{28}
+\contentsline {section}{\numberline {8.1}Common Sensors}{28}
+\contentsline {subsection}{\numberline {8.1.1}Sun Sensor}{29}
+\contentsline {subsection}{\numberline {8.1.2}Magnetometer}{29}
+\contentsline {subsection}{\numberline {8.1.3}Star Tracker}{29}
+\contentsline {subsection}{\numberline {8.1.4}Inertial Measurement Unit (IMU)}{29}
+\contentsline {chapter}{\numberline {9}TRIAD Method}{31}
+\contentsline {section}{\numberline {9.1}How it Works}{31}
+\contentsline {subsection}{\numberline {9.1.1}How Do We Assemble the Triad Frame?}{32}
+\contentsline {section}{\numberline {9.2}Downsides}{32}
+\contentsline {chapter}{\numberline {10}What is Wahba's Problem?}{34}
+\contentsline {section}{\numberline {10.1}Definitions and Things}{34}
+\contentsline {subsection}{\numberline {10.1.1}Defining Wahba's Problem}{34}
+\contentsline {subsection}{\numberline {10.1.2}Well, How Do We Solve It?}{35}
+\contentsline {chapter}{\numberline {11}Davenport's Q}{36}
+\contentsline {subsection}{\numberline {11.0.1}Wahba's Problem in Another Light}{36}
+\contentsline {section}{\numberline {11.1}Davenport's Method}{37}
+\contentsline {subsection}{\numberline {11.1.1}Maximizing the Gain?}{38}
+\contentsline {section}{\numberline {11.2}In a Nutshell}{39}
+\contentsline {chapter}{\numberline {12}QUEST}{40}
+\contentsline {section}{\numberline {12.1}A Nice Approximation}{40}
+\contentsline {section}{\numberline {12.2}Refining the Guess}{41}
+\contentsline {section}{\numberline {12.3}Searching for \(\mathaccentV {bar}016{q}\)}{42}
+\contentsline {section}{\numberline {12.4}Aren't You Forgetting Something?}{43}
+\contentsline {section}{\numberline {12.5}In a Nutshell}{44}
+\contentsline {chapter}{\numberline {13}Answer Key}{45}
+\contentsline {section}{\numberline {13.1}Chapter 1 DCM}{45}
