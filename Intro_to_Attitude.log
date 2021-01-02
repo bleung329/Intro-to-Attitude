@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.27)  26 DEC 2020 22:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.27)  2 JAN 2021 10:41
 entering extended mode
 **./Intro_to_Attitude.tex
 (Intro_to_Attitude.tex
@@ -314,7 +314,7 @@ the project/mission,
  []
 
 
-Overfull \hbox (2.33075pt too wide) in paragraph at lines 84--85
+Overfull \hbox (2.33075pt too wide) in paragraph at lines 86--87
 []\OT1/cmr/bx/n/14.4 At/near the sin-gu-lar-i-ties, the kine-matic dif-fer-en-t
 ial equa-
  []
@@ -327,38 +327,32 @@ Chapter 3.
 <./images/dcmalpha.jpg, id=38, 942.4008pt x 895.4253pt>
 File: ./images/dcmalpha.jpg Graphic file (type jpg)
 <use ./images/dcmalpha.jpg>
-Package pdftex.def Info: ./images/dcmalpha.jpg  used on input line 128.
+Package pdftex.def Info: ./images/dcmalpha.jpg  used on input line 130.
 (pdftex.def)             Requested size: 199.16928pt x 189.23355pt.
  [9 <./images/dcmalpha.jpg>] [10]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 163.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 165.
 
 
 ("C:\Users\Brian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 163.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 165.
 
-[11]
-Overfull \hbox (13.35614pt too wide) in paragraph at lines 201--202
-[]\OT1/cmr/m/n/14.4 Using vet-ri-ces with or-thog-o-nal vec-tors is con-ven-tio
-n be-cause they're
- []
-
-[12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 224--250
+[11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 226--252
 
  []
 
-[14]
+[13] [14]
 Chapter 4.
 <./images/euler_proper.jpg, id=62, 620.3175pt x 231.86626pt>
 File: ./images/euler_proper.jpg Graphic file (type jpg)
 <use ./images/euler_proper.jpg>
-Package pdftex.def Info: ./images/euler_proper.jpg  used on input line 265.
+Package pdftex.def Info: ./images/euler_proper.jpg  used on input line 267.
 (pdftex.def)             Requested size: 455.24408pt x 170.16313pt.
 
-Overfull \hbox (25.24408pt too wide) in paragraph at lines 265--266
+Overfull \hbox (25.24408pt too wide) in paragraph at lines 267--268
  [] 
  []
 
@@ -369,46 +363,46 @@ Chapter 5.
 <./images/PRV1.png, id=76, 264.99pt x 276.232pt>
 File: ./images/PRV1.png Graphic file (type png)
 <use ./images/PRV1.png>
-Package pdftex.def Info: ./images/PRV1.png  used on input line 334.
+Package pdftex.def Info: ./images/PRV1.png  used on input line 336.
 (pdftex.def)             Requested size: 227.62204pt x 237.2809pt.
 [19
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
+Underfull \hbox (badness 10000) in paragraph at lines 341--342
 
  []
 
 [20 <./images/PRV1.png>] [21]
 Chapter 6.
 
-Overfull \hbox (1.39734pt too wide) in paragraph at lines 379--380
+Overfull \hbox (1.39734pt too wide) in paragraph at lines 381--382
 \OT1/cmr/m/n/14.4 one says ``non-singular at-ti-tude de-scrip-tion". If you've 
 googled ``quater-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--382
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
 
  []
 
 [22
 
 ] [23]
-Underfull \hbox (badness 10000) in paragraph at lines 430--431
+Underfull \hbox (badness 10000) in paragraph at lines 432--433
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 443--444
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 451--453
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 453--455
 
  []
 
-[24] [25]
+[25]
 Chapter 7.
 [26
 
@@ -416,40 +410,40 @@ Chapter 7.
 Chapter 8.
 [28
 
-] [29] [30]
+] [29] [30] [31]
 Chapter 9.
-<./images/triad.png, id=119, 497.86pt x 395.4775pt>
+<./images/triad.png, id=122, 497.86pt x 395.4775pt>
 File: ./images/triad.png Graphic file (type png)
 <use ./images/triad.png>
-Package pdftex.def Info: ./images/triad.png  used on input line 513.
+Package pdftex.def Info: ./images/triad.png  used on input line 542.
 (pdftex.def)             Requested size: 227.62204pt x 180.81754pt.
-[31
+[32
 
- <./images/triad.png>] [32] [33]
+ <./images/triad.png>] [33] [34]
 Chapter 10.
-[34
+[35
 
-] [35]
+] [36]
 Chapter 11.
-[36
+[37
 
-] [37] [38] [39]
+] [38] [39] [40]
 Chapter 12.
-[40
+[41
 
-] [41] [42] [43] [44]
+] [42] [43] [44] [45]
 Chapter 13.
-[45
+[46
 
 ] (Intro_to_Attitude.aux) ) 
 Here is how much of TeX's memory you used:
  2804 strings out of 492972
  43575 string characters out of 3126622
- 113265 words of memory out of 3000000
+ 113263 words of memory out of 3000000
  6634 multiletter control sequences out of 15000+200000
  16939 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,25p,592b,196s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,11n,25p,595b,216s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Brian/AppData/Local/Programs/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Brian/AppData/Local/Programs/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Brian/AppData/Lo
@@ -465,9 +459,9 @@ AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/U
 sers/Brian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
 y10.pfb><C:/Users/Brian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmti12.pfb>
-Output written on Intro_to_Attitude.pdf (46 pages, 1012653 bytes).
+Output written on Intro_to_Attitude.pdf (47 pages, 1015461 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
+ 210 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
