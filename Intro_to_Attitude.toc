@@ -12,7 +12,7 @@
 \contentsline {chapter}{\numberline {3}DCMs}{8}
 \contentsline {section}{\numberline {3.1}Funky Formalisms}{8}
 \contentsline {section}{\numberline {3.2}The Math: A Tale of 2 Frames}{9}
-\contentsline {subsection}{\numberline {3.2.1}Well, Whats The Point?}{10}
+\contentsline {subsection}{\numberline {3.2.1}Observation Vectors and DCMs}{10}
 \contentsline {section}{\numberline {3.3}Adding and Subtracting DCMs}{11}
 \contentsline {section}{\numberline {3.4}Properties}{12}
 \contentsline {subsection}{\numberline {3.4.1}Wait a Minute...}{13}

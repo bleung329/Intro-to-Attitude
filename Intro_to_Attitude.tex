@@ -18,9 +18,10 @@
 %DOCUMENT START
 \title{Attitude with an Attitude \\
 \large An Informal Intro to Spacecraft Attitude Determination}
-\author{Brian Leung\\University of Michigan, Class of 2022}
+\author{Brian Leung\\University of Michigan, Class of 2021}
 
 \begin{document}
+
 \maketitle
 \setcounter{tocdepth}{0}
 \tableofcontents{}
@@ -54,7 +55,7 @@ Let me pose this question to you. If you're floating around in an infinite black
 
 \section{Frames?}
 
-When I say reference frame, or frames in general, I mean coordinate frames: XYZ, \(\hat{i}\hat{j}\hat{k}\), 3 basis vectors, etc. You can pretty much glue a coordinate frame onto anything you want. Attaching frames to things helps ground them in a mathematical context, which helps in more reasons than I can name. For example, it's a lot easier to say things like "I'm about 10 meters south and 1 meter east of you with respect to your NED frame". This is just a rough example, but there are plenty of other good reasons to put frames on bodies.
+When I say reference frame, or frames in general, I mean coordinate frames: XYZ, \(\hat{i}\hat{j}\hat{k}\), 3 basis vectors, etc. You can pretty much glue a coordinate frame onto anything you want. Attaching frames to things helps ground them in a mathematical context, which helps in more reasons than I can name. For example, it's a lot easier to say things like ``I'm about 10 meters south and 1 meter east of you with respect to your NED frame". This is just a rough example, but there are plenty of other good reasons to put frames on bodies.
 
 \begin{center}
 \includegraphics[width=4cm]{shuttle_body_frame}\includegraphics[height=5.2cm]{ecef}\\
@@ -81,7 +82,7 @@ There's likely some in-depth proof showing why this is the case, but I'm not qua
 
 \item \textbf{A 3 coordinate set will have at least 1 geometric orientation where the coordinates are \underline{singular}.} 
 
-When an attitude description becomes \textbf{singular}, it's best described as acting ... weird. As in, the math doesn't behave very nicely (divisions by 0, non-uniqueness, etc.). As a real life example, think gimbal lock. The gimbal, when turned a certain way, loses degrees of freedom.
+When an attitude description becomes \textbf{singular}, it's best described as acting weird. More specifically, the math doesn't behave very nicely (think divisions by 0, non-uniqueness, etc.). As a real life example, think gimbal lock. The gimbal, when turned a certain way, loses degrees of freedom.
 
 \item \textbf{At/near the singularities, the kinematic differential equations are also singular.} 
 
@@ -100,7 +101,7 @@ It doesn't stand for dichloromethane. And please, don't call it a DCM matrix.
 \textbf{DIRECTION COSINE MATRIX: A transformation matrix that converts from one reference frame to another.}
 \end{center}
 
-We consider the DCM the ``mother of all attitude parameterizations", quoting Professor Schaub. Every DCM maps to an attitude description of your choice and every description maps back to a DCM. You could even say it's the center of the great web of descriptions. With DCMs, we directly interact with the basis vectors of the frames themselves. Before we move any further, let's get some \emph{formalisms} out of the way.
+We consider the DCM the ``mother of all attitude parameterizations". Every DCM maps to an attitude description of your choice and every description maps back to a DCM. You could even say it's the center of the great web of descriptions. With DCMs, we directly interact with the basis vectors of the frames themselves. Before we move any further, let's get some \emph{formalisms} out of the way.
 \section{Funky Formalisms}
 When describing the body frame, I'll use the letter $b$. Describing the basis vectors that make up the body frame, I'll say $\bv{1}, \bv{2}, \bv{3}$. Likewise, describing the inertial frame basis vectors uses the letter $n$, like so: $\nv{1}, \nv{2}, \nv{3}$. Constantly writing out $\bv{1}, \bv{2}, \bv{3}$ is gonna get old real fast, so lets save our hands some work and assemble them into something called a \emph{vectrix}.
 \[
@@ -114,7 +115,7 @@ When describing the body frame, I'll use the letter $b$. Describing the basis ve
 \end{bmatrix}
 \] 
 
-In addition to saving ink, vectrices are also easier to do linear algebra with, since they're (for all intents and purposes) matrices. When the time comes, I'll refer to the components of a matrix, like so:
+In addition to saving ink, vectrices are also easier to do linear algebra with. When the time comes, I'll refer to the components of a matrix, like so:
 \[
 [C] = \begin{bmatrix}
 C_{11}&C_{12}&C_{13}\\
@@ -152,9 +153,9 @@ b_2 \cdot n_1 & b_2 \cdot n_2 & b_2 \cdot n_3 \\
 b_3 \cdot n_1 & b_3 \cdot n_2 & b_3 \cdot n_3
 \end{bmatrix} \{\hat{n}\} = [BN] \{\hat{n}\}
 \]
-We'll call this matrix [BN]. The BN matrix we have here is the \emph{Direction Cosine Matrix}. It doesn't take a rocket scientiest to see that the ``Direction Cosine" part of the name comes from all these cosines.
+We'll call this matrix [BN]. The BN matrix we have here is the \emph{Direction Cosine Matrix}. The DCM is a way that describes how 1 frame is rotated relative to another, just like all the other attitude formulations we'll see. It doesn't take a rocket scientist to see that the ``Direction Cosine" part of the name comes from all these cosines.
 
-\subsection{Well, Whats The Point?}
+\subsection{Observation Vectors and DCMs}
 Glad you asked. Here's a situation: You are on Earth and your friend is on a spaceship in orbit. You just saw a really cool star and want to radio up to your friend where to look, with respect to their frame. You know the DCM that converts from your frame to theirs. How would you achieve this?
 
 We can easily do this with DCMs. Lets say that v is the vector to the star. We can describe it in both the inertial frame and body frame, like so:
@@ -267,14 +268,14 @@ Here's a visual example if it ain't too clear:
 \includegraphics[width=16cm]{euler_proper}
 \end{center}
 
-This is what's described as a 3-1-3 Euler Angle, since the rotations operate on the Z, X, and Z body axes. The rotation sequence does the following:
+This is what's described as a 3-1-3 Euler Angle, since the rotations operate on the Z, X, and Z body axes. The 3-1-3 rotation sequence does the following:
 \begin{enumerate}
 \item Rotate the frame around the Z-axis by angle $\phi$. This forms a new frame with $X'$ and $Y'$ axes.
 \item Rotate the frame around the X'-axis by angle $\theta$. This forms a frame with the $Z'$ and $Y''$ axes.
 \item Finally, rotate the frame around the Z' axis by angle $\psi$. This forms a frame with the $X''$ and $Y'''$ axes, and the rotation is finished.
 \end{enumerate}
 
-Of course, this is not the only set out there.
+Of course, this is not the only set out there. You can 
 
 \section{Types of Euler Angles}
 Euler angles fall into two categories.
@@ -321,7 +322,7 @@ To get the full DCM of a $\alpha\beta\gamma$ Euler set:
 \section{DCMs to Euler Angles}
 Converting from DCMs to Euler angles is a more involved process, due to the large variety of sets.
 \section{Singularities}
-As you've probably heard, Euler angles are prone to throwing singularities when rotated in certain ways. 
+As you've probably heard, Euler angles are prone to throwing singularities when rotated in certain ways. Any self respecting spacecraft engineer will never use Euler angles to describe attitude, since satellites and things are fully capable of tumbling into one of those singularities. Just... don't use them.
 \section{Test Your Knowledge}
 
 \chapter{Principal Rotation Vectors}
@@ -376,6 +377,7 @@ e_1\\e_2\\e_3\\
 C_{23}-C_{32}\\C_{31}-C_{13}\\C_{12}-C_{21}\\
 \end{bmatrix}
 \]
+That $\sin{\phi}$ in the denominator is our source of ambiguities. Whenever the rotation angle is 0 or 180 degrees, it really throws a wrench into how you would describe the e vector.
 \chapter{Quaternions/EPs}
 
 Quaternions are usually the first thing that comes to mind when someone says ``non-singular attitude description". If you've googled ``quaternion math", you might've been overwhelmed by the mathematical mumbo jumbo, so let's leave all that stuff for the math majors. Thankfully, you don't have to be a master of quaternion math to be able to use quaternions.
@@ -541,7 +543,7 @@ Published in 1964, TRIAD (or specifically, TRIAD-1) is one of the oldest algorit
 \begin{center}
 \includegraphics[width=8cm]{triad}
 \end{center}
-We want a DCM that gets us from inertial frame to a body frame, but jumping straight from inertial to body seems pretty hard. Let's use an intermediate frame, more commonly referred to as \emph{triad frame}, to hop from 
+We want a DCM that gets us from inertial frame to a body frame, but jumping straight from inertial to body seems pretty hard. Let's use an intermediate frame, more commonly referred to as \emph{triad frame}, to hop from:
 \begin{center}Inertial $\rightarrow$ Triad $\rightarrow$ Body\end{center}
 \subsection{How Do We Assemble the Triad Frame?}
 You'll need to assemble the triad frame using the measurement vectors in both the body and inertial context. Assuming we have a sun sensor that gives us a measurement vector $\hat{s}$ and a magnetometer that gives us a vector $\hat{m}$:
@@ -592,7 +594,7 @@ Nothing we don't know. However, the real world is mathematically cruel. You will
 
 Well, what do we do now? If we can't acquire a perfect [BN], then we should at least try finding a [BN] that maps our inertial measurements as closely as possible to our body measurements. 
 
-So Wahba proposed, ``Hey, why don't we try to minimize my handy dandy loss function to get the best possible [BN] matrix?"\footnote{I'm pretty sure she didn't actually say this, just roll with it.}:
+So Wahba proposed, ``Hey, why don't we try to minimize my handy loss function to get the best possible [BN] matrix?"\footnote{I'm pretty sure she didn't actually say this, just roll with it.}:
 
 \[
 \mathbf{
